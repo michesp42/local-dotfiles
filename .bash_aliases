@@ -6,6 +6,12 @@ alias dots='/usr/bin/git --git-dir="$HOME"/.local/dotfiles --work-tree="$HOME"'
 
 if [ "$TERM" != "linux" ]; then
 
+  # an almost better cd command
+  bcd() {
+    cd $(/usr/bin/ls -1d -- .*/ */ | tr -d '/' | fzf --height=~70% \
+      --border=rounded --reverse --prompt=' ' --pointer='')
+  }
+
   # use `exa` as `ls` if it's installed
   if command -v exa &>/dev/null; then
     alias ls='exa --icons --group-directories-first'
