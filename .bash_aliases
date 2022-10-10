@@ -12,40 +12,41 @@ if [ "$TERM" != "linux" ]; then
       --border=rounded --reverse --prompt=' ' --pointer='')
   }
 
-  # use `exa` as `ls` if it's installed
-  if command -v exa &>/dev/null; then
-    alias ls='exa --icons --group-directories-first'
-    alias tree='exa --icons --tree'
-  fi
+  # add bling to fzf
+  alias fzf="(fzf --height=~70% --border=rounded --reverse --prompt=' ' \
+--pointer='')"
 
-  if command -v bat &>/dev/null; then
-    alias less='bat --plain'        # less but with syntax highlighting
-    alias cat='bat --plain --plain' # cat but with syntax highlighting
-  fi
+  #
+  # fancy alternatives for default programs
+  #
 
-  if command -v yt-dlp &>/dev/null; then
-    # download audio from youtube in mp3 format
-    alias yta='yt-dlp --ignore-errors --output "%(title)s.%(ext)s" \
+  alias ls='exa --icons --group-directories-first' # ls but with icons
+  alias tree='exa --icons --tree'                  # tree but with icons
+  alias less='bat --plain'                         # less but with syntax highlighting
+  alias cat='bat --plain --plain'                  # cat but with syntax highlighting
+
+  #
+  # yt-dlp related aliases
+  #
+
+  # download audio from youtube in mp3 format
+  alias yta='yt-dlp --ignore-errors --output "%(title)s.%(ext)s" \
 --extract-audio --audio-format mp3'
 
-    # download youtube playlist as mp3 audio
-    alias ytap='yt-dlp --yes-playlist --ignore-errors --output \
+  # download youtube playlist as mp3 audio
+  alias ytap='yt-dlp --yes-playlist --ignore-errors --output \
 "%(title)s.%(ext)s" --extract-audio --audio-format mp3'
-  fi
 
-  if command -v xclip &>/dev/null; then
-    # copy selection from stdout to clipboard
-    alias cin='xclip -selection clipboard -i'
+  #
+  # clipboard related aliases
+  #
 
-    # output selection from clipboard to stdout
-    alias cout='xclip -selection clipboard -o'
+  alias cin='xclip -selection clipboard -i'  # copy selection from stdout to clipboard
+  alias cout='xclip -selection clipboard -o' # output selection from clipboard to stdout
 
-    # find files and copy the selected file path to clipboard
-    if [ command -v fd &>/dev/null -a command -v fzf &>/dev/null ]; then
-      alias cpp="fd --type file | fzf | sed 's/^..//' | tr -d '\n' | xclip \
+  # select a filepath and copy it to clipboard
+  alias cpp="fd --type file | fzf | sed 's/^..//' | tr -d '\n' | xclip \
 -selection clip"
-    fi
-  fi
 
 else
 
