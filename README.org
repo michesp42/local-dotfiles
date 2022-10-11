@@ -4,7 +4,7 @@
 #+DATE: 2022-10-10 19:17 
 #+DESCRIPTION: Git bare repository of my messy dotfiles
 
-These dotfiles are tracked using a git bare repository and need these [[https://gitlab.com/michesp42/local-scripts][scripts]] work properly.
+These dotfiles are tracked using a git bare repository and need these [[https://gitlab.com/michesp42/local-scripts][scripts]] to work properly.
 
 * Set up for git bare repo
 
@@ -47,9 +47,9 @@ By default, running ~git status~ will show all untracked files in the work tree.
 
 #+end_src
 
-** Remove ~README~ and ~UNLICENSE~ from ~$HOME~
+** Remove ~README~ and ~UNLICENSE~ from ~$HOME~, sort of
 
-The ~README~ and ~UNLICENSE~ are located in the root of the dotfiles repository so that when they are pushed to the remote repository they will be recognized and rendered/processed(?) by gitlab and github. However, I don't want to keep them in my home directory and I would have just put them somewhere else if it was that simple which clearly is not the case based on the discussion in this [[https://github.com/TheLocehiliosan/yadm/issues/93][issue]]. Luckily, I found a solution from the link and that is ~git sparse-checkout~. I just have to run the following.
+The ~README~ and ~UNLICENSE~ are located in the root of the dotfiles repository so that when they are pushed to the remote repository they will be recognized and rendered/processed(?) by gitlab and github. However, I don't want to keep seeing them in my home directory. I would have just put them somewhere else if it was that simple but this seems not to be the case based on the discussion in this [[https://github.com/TheLocehiliosan/yadm/issues/93][issue]]. Luckily, I found a solution from the same link and that is ~git sparse-checkout~. I just have to run the following.
 
 #+begin_src bash
 
