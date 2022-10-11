@@ -1,0 +1,8 @@
+Attributions
+============
+
+The icons I use for dunst were downloaded from flaticon.com.
+
+info.png: <a href="https://www.flaticon.com/free-icons/about" title="about icons">About icons created by Anggara - Flaticon</a>
+notification.png: <a href="https://www.flaticon.com/free-icons/notification" title="notification icons">Notification icons created by Freepik - Flaticon</a>
+warning.png: <a href="https://www.flaticon.com/free-icons/attention" title="attention icons">Attention icons created by sonnycandra - Flaticon</a>
