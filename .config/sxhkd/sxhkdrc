@@ -191,14 +191,14 @@ Print
 
 # backlight control
 XF86MonBrightnessUp
-    brightnessctl set +5%
+    brightnessctl set +5% && polybar-msg action brightness hook 0
 XF86MonBrightnessDown
-    brightnessctl set 5%-
+    brightnessctl set 5%- && polybar-msg action brightness hook 0
 
 # audio volume control
 XF86AudioRaiseVolume
-    amixer -q sset PCM,0 5+ unmute
+    amixer -q sset PCM,0 5+ unmute && polybar-msg action volume hook 0
 XF86AudioLowerVolume
-    amixer -q sset PCM,0 5- unmute
+    amixer -q sset PCM,0 5- unmute && polybar-msg action volume hook 0
 XF86AudioMute
-    amixer -q sset PCM,0 toggle
+    amixer -q sset PCM,0 toggle && polybar-msg action volume hook 0
