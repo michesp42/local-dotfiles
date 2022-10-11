@@ -1,0 +1,32 @@
+[user]
+	name = Michael B. Espeña
+	email = michael.esp42@pm.me
+
+[core]
+	editor = vim
+	pager = delta
+
+[init]
+	defaultBranch = main
+
+[commit]
+	gpgSign = true
+
+[tag]
+	gpgSign = true
+
+[interactive]
+	diffFilter = delta --color-only
+[add.interactive]
+	useBuiltin = false
+
+[delta]
+	navigate = true
+	light = false
+	syntax-theme = Nord
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
