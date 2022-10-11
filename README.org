@@ -16,7 +16,7 @@ These are the steps of setting up this git bare repository in case I forget
 
 ** Step 1: Initialize repository
 
-Initialize git bare repository with the following command.
+Create and initialize the git bare repository with the following commands.
 
 #+begin_src bash
 
@@ -26,11 +26,11 @@ Initialize git bare repository with the following command.
 
 #+end_src
 
-The directory ~~/.local/dotfiles~ can be replaced with any sensible directory you prefer.
+The directory ~$HOME/.local/dotfiles~ can be replaced with any sensible directory you prefer.
 
 ** Step 2: Add alias
 
-For ~git~ to know when we want to work with our dotfiles we have to specify a couple of flags, namely ~--git-dir~ and ~--work-tree~. This would be a hassle to type all the time so we might as well add an alias for it in our ~~/.bashrc~. In this case I'm calling it ~dots~ but it can be anything you prefer.
+For ~git~ to know when we want to work with our dotfiles we have to specify a couple of flags, namely ~--git-dir~ and ~--work-tree~. This would be a hassle to type all the time so we might as well add an alias for it in our ~$HOME/.bashrc~. In this case I'm calling it ~dots~ but it can be anything you prefer.
 
 #+begin_src bash
 
