@@ -4,8 +4,6 @@
 #+DATE: 2022-10-10 19:17 
 #+DESCRIPTION: Git bare repository of my messy dotfiles
 
-* About
-
 These dotfiles are tracked using a git bare repository.
 
 
