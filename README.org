@@ -52,7 +52,3 @@ By default, running ~git status~ will show all untracked files in the work tree.
 ** Step 4: Manage the dotfiles
 
 Now we can use the ~dots~ alias like a normal git command to manage dotfiles.
-
-* TODO Roadmap for this dotfiles
-
-- [ ] Create a post install script for my Linux setup.
