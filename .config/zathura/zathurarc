@@ -1,0 +1,13 @@
+set window-title-basename "true"
+set selection-clipboard "clipboard"
+set font "Ubuntu Mono 12"
+set guioptions none
+set adjust-open width
+set statusbar-home-tilde  true
+set recolor               true
+set selection-clipboard   clipboard
+set sandbox none
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+
+include themes/nord
