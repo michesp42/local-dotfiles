@@ -11,8 +11,7 @@ These dotfiles are tracked using a git bare repository.
 
 * Set up for git bare repo
 
-These are the steps of setting up this git bare repository in case I forget
-(which I probably will).
+These are the steps of setting up this git bare repository in case I forget (which I probably will).
 
 ** Step 1: Initialize repository
 
