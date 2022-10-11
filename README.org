@@ -1,0 +1,58 @@
+
+#+TITLE: Local dotfiles
+#+AUTHOR: Michael Espeña <michael.esp42@pm.me>
+#+DATE: 2022-10-10 19:17 
+#+DESCRIPTION: Git bare repository of my messy dotfiles
+
+* About
+
+These dotfiles are tracked using a git bare repository.
+
+
+* Set up for git bare repo
+
+These are the steps of setting up this git bare repository in case I forget
+(which I probably will).
+
+** Step 1: Initialize repository
+
+Initialize git bare repository with the following command.
+
+#+begin_src bash
+
+  mkdir --parent ~/.local/dotfiles/
+  cd ~/.local/dotfiles
+  git init --bare
+
+#+end_src
+
+The directory ~~/.local/dotfiles~ can be replaced with any sensible directory you prefer.
+
+** Step 2: Add alias
+
+For ~git~ to know when we want to work with our dotfiles we have to specify a couple of flags, namely ~--git-dir~ and ~--work-tree~. This would be a hassle to type all the time so we might as well add an alias for it in our ~~/.bashrc~. In this case I'm calling it ~dots~ but it can be anything you prefer.
+
+#+begin_src bash
+
+  alias dots='/usr/bin/git --git-dir="$HOME"/.local/dotfiles --work-tree="$HOME"'
+
+#+end_src
+
+
+** Step 3: Additional configuration
+
+By default, running ~git status~ will show all untracked files in the work tree. We don't want to have this for the the ~dots~ alias since we are only interested in the dotfiles we are tracking and not all the other files in our home directory so we have to add the following configuration for the bare repository.
+
+#+begin_src bash
+
+  dots config --local status.showUntrackedFiles no
+
+#+end_src
+
+** Step 4: Manage the dotfiles
+
+Now we can use the ~dots~ alias like a normal git command to manage dotfiles.
+
+* TODO Roadmap for this dotfiles
+
+- [ ] Create a post install script for my Linux setup.
