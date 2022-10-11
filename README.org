@@ -38,6 +38,8 @@ For ~git~ to know when we want to work with our dotfiles we have to specify a co
 
 ** Step 3: Additional configuration
 
+** Ignore untracked files
+
 By default, running ~git status~ will show all untracked files in the work tree. We don't want to have this for the the ~dots~ alias since we are only interested in the dotfiles we are tracking and not all the other files in our home directory so we have to add the following configuration for the bare repository.
 
 #+begin_src bash
@@ -45,6 +47,19 @@ By default, running ~git status~ will show all untracked files in the work tree.
   dots config --local status.showUntrackedFiles no
 
 #+end_src
+
+** Remove ~README~ and ~UNLICENSE~ from ~$HOME~
+
+The ~README~ and ~UNLICENSE~ are located in the root of the dotfiles repository so that when they are pushed to the remote repository they will be recognized and rendered/processed(?) by gitlab and github. However, I don't want to keep them in my home directory and I would have just put them somewhere else if it was that simple which clearly is not the case based on the discussion this [[https://github.com/TheLocehiliosan/yadm/issues/93][issue]]. Luckily, I found a solution from the link and that is ~git sparse-checkout~. I just have to run the following.
+
+#+begin_src bash
+
+  dots config core.sparseCheckout true
+  dots sparse-checkout set '/*' '!README.org' '!UNLICENSE'
+
+#+end_src
+
+The commands above are explained [[https://github.com/TheLocehiliosan/yadm/issues/93#issuecomment-582585718][here]] and [[https://github.com/TheLocehiliosan/yadm/issues/93#issuecomment-886667802][here]].
 
 ** Step 4: Manage the dotfiles
 
