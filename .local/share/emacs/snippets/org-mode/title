@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: title
+# key: title
+# --
+
+#+TITLE: ${1:title}
+#+AUTHOR: Michael Espeña <michael.esp42@pm.me>
+#+DATE: `(format-time-string "%Y-%m-%d %H:%M")` 
+#+DESCRIPTION: ${2:description}
+
+* $0
