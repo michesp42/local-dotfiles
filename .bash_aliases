@@ -8,7 +8,7 @@ if [ "$TERM" != "linux" ]; then
 
   # an almost better cd command
   bcd() {
-    cd $(/usr/bin/ls -1d -- .*/ */ | tr -d '/' | fzf --height=~70% \
+    cd $(/usr/bin/ls -1d -- .*/ */ | tr -d '/' | /usr/bin/fzf --height=~70% \
       --border=rounded --reverse --prompt=' ' --pointer='')
   }
 
