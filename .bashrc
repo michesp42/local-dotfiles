@@ -89,7 +89,7 @@ function __prompt_command {
 
   # prefix icon depends on whether $USER is under its home directory or not
   local ICON_PREFIX=""
-  if ! echo $(pwd) | grep -q "$USER"; then
+  if ! pwd | grep -q "$USER"; then
     ICON_PREFIX="${RED}${OFF} "
   fi
 
