@@ -167,7 +167,7 @@ super + shift + f
 
 # change wallpapers
 super + alt + c
-    feh --no-fehbg --bg-scale --recursive --random ~/.local/share/wallpapers/nord/*
+    set-wallpaper
 
 # restart polybar
 super + alt + p
