@@ -78,6 +78,7 @@ export LESS_TERMCAP_us=$'\e[1;4;35m' # key terms?
 [ -d "$HOME"/.local/bin ] && PATH="$PATH:$HOME/.local/bin"
 [ -d "$HOME"/.local/scripts ] && PATH="$PATH:$HOME/.local/scripts"
 
+# shellcheck source=/home/mice/.bashrc
 [ -f ~/.bashrc ] && . ~/.bashrc
 
 # autostart X at login
