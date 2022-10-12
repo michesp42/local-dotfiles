@@ -13,23 +13,44 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 # start some nice programs
 
-if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+  for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
 fi
 
-# programs I set to run when starting X
+#
+# start more nice programs
+#
+
+# set default wallpaper
+DEFAULT_WALLPAPER="$XDG_DATA_HOME"/wallpapers/default.jpg
+[ -f "$DEFAULT_WALLPAPER" ] && set-wallpaper "$DEFAULT_WALLPAPER" &
+
+# fix mouse pointer
+xsetroot -cursor_name left_ptr &
+
+# music player daemon
 pgrep -x mpd >/dev/null || mpd &
+
+# compositor for transparency
 pgrep -x picom >/dev/null || picom --experimental-backends &
+
+# redshift to adjust display color temperature
 pgrep -x redshift >/dev/null || redshift &
+
+# notification daemon to receive desktop notifications and warnings
 pgrep -x dunst >/dev/null || dunst &
+
+# launch emacs daemon so emacs opens faster
 pgrep -x emacs >/dev/null || emacs --daemon &
+
+# torrent daemon set to start but not automatically restart paused torrents
 pgrep -af transmission-daemon >/dev/null || transmission-daemon --paused &
+
+# start polkit agents for apps that need elevated priviliges
 pgrep -af polkit-gnome >/dev/null || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-xsetroot -cursor_name left_ptr &
-~/.fehbg &
-
+# launch window manager
 exec bspwm
