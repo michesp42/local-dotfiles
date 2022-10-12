@@ -140,5 +140,5 @@ else
   clear
 fi
 
-# load user's custom aliases
-[ -r ~/.bash_aliases ] && . ~/.bash_aliases
+# shellcheck source=/home/mice/.bash_aliases
+[ -r ~/.bash_aliases ] && . ~/.bash_aliases # load user's custom aliases
