@@ -57,8 +57,8 @@ export EDITOR=vim
 export BROWSER=librewolf
 export TERMINAL=alacritty
 
+# export STARSHIP_CONFIG="$XDG_CONFIG_HOME"/starship/starship.toml
 export BAT_CONFIG_PATH="$XDG_CONFIG_HOME"/bat/bat.conf
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME"/starship/starship.toml
 export QT_STYLE_OVERRIDE=kvantum
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=fg:#d8dee9,bg:#2e3440,hl:#81a1c1
