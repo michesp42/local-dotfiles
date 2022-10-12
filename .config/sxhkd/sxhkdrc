@@ -138,6 +138,10 @@ super + e
 super + p
     rofi-pass
 
+# lock screen
+super + ctrl + alt + l
+    slock
+
 # launch browser
 super + b
     librewolf
