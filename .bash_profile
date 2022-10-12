@@ -82,6 +82,6 @@ export LESS_TERMCAP_us=$'\e[1;4;35m' # key terms?
 [ -f ~/.bashrc ] && . ~/.bashrc
 
 # autostart X at login
-if [ -z "${DISPLAY}" -a "${XDG_VTNR}" -eq 1 ]; then
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx "$XDG_CONFIG_HOME/X11/xinitrc"
 fi
