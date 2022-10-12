@@ -40,7 +40,6 @@ function __prompt_command {
   local exitstatus="$?"
 
   # define shorthands for the colors
-  local BOLD="\[\033[1m\]"
   local RED="\[\033[1;31m\]"
   local GREEN="\[\e[32;1m\]"
   local BLUE="\[\e[34;1m\]"
