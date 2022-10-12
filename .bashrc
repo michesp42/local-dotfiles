@@ -49,32 +49,38 @@ function __prompt_command {
   local OFF="\[\033[m\]"
 
   # get the git branch if inside a git repo
-  local branch=$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)
-  if [ ! -z "$branch" ]; then
-    branch=$(echo " ${PURPLE}on  ${branch}")
-  fi
+  local branch
+  branch=$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)
 
-  # get more git information if any, like the number of modified, deleted,
-  # untracked, added, and unmerged files.
-  local changes=$(git status -s 2>/dev/null | wc -l)
-  if [ "$changes" -eq 0 ]; then
-    local dirty=""
-  else
-    local dirty=" ${BLUE}[${OFF} "
+  if [ -n "$branch" ]; then
+    branch=" ${PURPLE}on  ${branch}"
 
-    local modified=$(git status -s | grep -e '^ M' | wc -l)
-    local deleted=$(git status -s | grep -e '^ D' | wc -l)
-    local untracked=$(git status -s | grep -e '^??' | wc -l)
-    local added=$(git status -s | grep -e '^A' | wc -l)
-    local unmerged=$(git status -s | grep -e '^U' | wc -l)
+    # get more git information if any, like the number of modified, deleted,
+    # untracked, added, and unmerged files.
+    local changes
+    changes=$(git status -s 2>/dev/null | wc -l)
 
-    [ "$modified" -gt 0 ] && dirty+="${GREEN}M$modified${OFF} "
-    [ "$deleted" -gt 0 ] && dirty+="${RED}D$deleted${OFF} "
-    [ "$untracked" -gt 0 ] && dirty+="${YELLOW}?$untracked${OFF} "
-    [ "$added" -gt 0 ] && dirty+="${PURPLE}A$added${OFF} "
-    [ "$unmerged" -gt 0 ] && dirty+="${CYAN}U$unmerged${OFF} "
+    if [ "$changes" -gt 0 ]; then
+      local git_status
+      local modified
+      local deleted
+      local dirty=" ${BLUE}[${OFF} "
 
-    dirty+="${BLUE}]${OFF}"
+      git_status="$(git status -s)"
+      modified=$(echo "$git_status" | grep -c '^ M')
+      deleted=$(echo "$git_status" | grep -c '^ D')
+      untracked=$(echo "$git_status" | grep -c '^??')
+      added=$(echo "$git_status" | grep -c '^A')
+      unmerged=$(echo "$git_status" | grep -c '^U')
+
+      [ "$modified" -gt 0 ] && dirty+="${GREEN}M$modified${OFF} "
+      [ "$deleted" -gt 0 ] && dirty+="${RED}D$deleted${OFF} "
+      [ "$untracked" -gt 0 ] && dirty+="${YELLOW}?$untracked${OFF} "
+      [ "$added" -gt 0 ] && dirty+="${PURPLE}A$added${OFF} "
+      [ "$unmerged" -gt 0 ] && dirty+="${CYAN}U$unmerged${OFF} "
+
+      dirty+="${BLUE}]${OFF}"
+    fi
   fi
 
   # define prompt with path info `\w`, git branch, and additional git
