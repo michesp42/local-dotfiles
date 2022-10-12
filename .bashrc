@@ -91,7 +91,7 @@ function __prompt_command {
   #
   # CYAN icon             -- if exit success
   # (exitstatus) RED icon -- if exit failure
-  local ICON="λ" # INFO: Other icons -         λ    
+  local ICON="➜" # INFO: Other icons -         λ     ➜
   if [ "$exitstatus" -eq 0 ]; then
     PS1="${prompt}\n${ICON_PREFIX}${CYAN}${ICON} ${OFF}"
   else
