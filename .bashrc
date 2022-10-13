@@ -28,86 +28,6 @@ if [ "$INSIDE_EMACS" = "vterm" ]; then
   }
 fi
 
-# Using this function the bash prompt will display the current working
-# directory (with an icon that warns if outside of user's home directory), git
-# branch and additional git information, and exit status
-#
-# CREDIT: This function for the prompt is just a modified version of the gist
-# from this link: `https://gist.github.com/chiuki/3430887`.
-function __prompt_command {
-  # save the exit status of the last run command before any command inside this
-  # function runs
-  local exitstatus="$?"
-
-  # define shorthands for the colors
-  local RED="\[\033[1;31m\]"
-  local GREEN="\[\e[32;1m\]"
-  local BLUE="\[\e[34;1m\]"
-  local PURPLE="\[\e[35;1m\]"
-  local CYAN="\[\e[36;1m\]"
-  local YELLOW="\[\e[33;1m\]"
-  local OFF="\[\033[m\]"
-
-  # get the git branch if inside a git repo
-  local branch
-  branch=$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)
-
-  if [ -n "$branch" ]; then
-    branch=" ${PURPLE}on  ${branch}"
-
-    # get more git information if any, like the number of modified, deleted,
-    # untracked, added, and unmerged files.
-    local changes
-    changes=$(git status -s 2>/dev/null | wc -l)
-
-    if [ "$changes" -gt 0 ]; then
-      local git_status
-      local modified
-      local deleted
-      local dirty=" ${BLUE}[${OFF} "
-
-      git_status="$(git status -s)"
-      modified=$(echo "$git_status" | grep -c '^ M')
-      deleted=$(echo "$git_status" | grep -c '^ D')
-      untracked=$(echo "$git_status" | grep -c '^??')
-      added=$(echo "$git_status" | grep -c '^A')
-      unmerged=$(echo "$git_status" | grep -c '^U')
-
-      [ "$modified" -gt 0 ] && dirty+="${GREEN}M$modified${OFF} "
-      [ "$deleted" -gt 0 ] && dirty+="${RED}D$deleted${OFF} "
-      [ "$untracked" -gt 0 ] && dirty+="${YELLOW}?$untracked${OFF} "
-      [ "$added" -gt 0 ] && dirty+="${PURPLE}A$added${OFF} "
-      [ "$unmerged" -gt 0 ] && dirty+="${CYAN}U$unmerged${OFF} "
-
-      dirty+="${BLUE}]${OFF}"
-    fi
-  fi
-
-  # define prompt with path info `\w`, git branch, and additional git
-  # information
-  local prompt="${BLUE}\w${OFF}${PURPLE}${branch}${OFF}${dirty}"
-
-  # prefix icon depends on whether $USER is under its home directory or not
-  local ICON_PREFIX=""
-  if ! pwd | grep -q "$USER"; then
-    ICON_PREFIX="${RED}${OFF} "
-  fi
-
-  # augment the prompt with an icon that changes color depending on the
-  # `exitstatus` of the last command ran
-  #
-  # CYAN icon             -- if exit success
-  # (exitstatus) RED icon -- if exit failure
-  local ICON="➜" # INFO: Other icons -         λ     ➜
-  if [ "$exitstatus" -eq 0 ]; then
-    PS1="${prompt}\n${ICON_PREFIX}${CYAN}${ICON} ${OFF}"
-  else
-    PS1="${prompt}\n"
-    PS1+="${RED}(${OFF}${YELLOW}$exitstatus${OFF}${RED})${OFF} "
-    PS1+="${ICON_PREFIX}${RED}${ICON} ${OFF}"
-  fi
-}
-
 # limit number of directories shown in the prompt
 # now `\w` will show something like `~/.../path/to/dir`
 PROMPT_DIRTRIM=3
@@ -115,6 +35,87 @@ PROMPT_DIRTRIM=3
 # if not in linux console, load the custom prompt
 # otherwise just load custom colors for the linux console
 if [ "$TERM" != "linux" ]; then
+
+  # Using this function the bash prompt will display the current working
+  # directory (with an icon that warns if outside of user's home directory),
+  # git branch and additional git information, and exit status
+  #
+  # CREDIT: This function for the prompt is just a modified version of the gist
+  # from this link: `https://gist.github.com/chiuki/3430887`.
+  function __prompt_command {
+    # save the exit status of the last run command before any command inside
+    # this function runs
+    local exitstatus="$?"
+
+    # define shorthands for the colors
+    local RED="\[\033[1;31m\]"
+    local GREEN="\[\e[32;1m\]"
+    local BLUE="\[\e[34;1m\]"
+    local PURPLE="\[\e[35;1m\]"
+    local CYAN="\[\e[36;1m\]"
+    local YELLOW="\[\e[33;1m\]"
+    local OFF="\[\033[m\]"
+
+    # get the git branch if inside a git repo
+    local branch
+    branch=$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)
+
+    if [ -n "$branch" ]; then
+      branch=" ${PURPLE}on  ${branch}"
+
+      # get more git information if any, like the number of modified, deleted,
+      # untracked, added, and unmerged files.
+      local changes
+      changes=$(git status -s 2>/dev/null | wc -l)
+
+      if [ "$changes" -gt 0 ]; then
+        local git_status
+        local modified
+        local deleted
+        local dirty=" ${BLUE}[${OFF} "
+
+        git_status="$(git status -s)"
+        modified=$(echo "$git_status" | grep -c '^ M')
+        deleted=$(echo "$git_status" | grep -c '^ D')
+        untracked=$(echo "$git_status" | grep -c '^??')
+        added=$(echo "$git_status" | grep -c '^A')
+        unmerged=$(echo "$git_status" | grep -c '^U')
+
+        [ "$modified" -gt 0 ] && dirty+="${GREEN}M$modified${OFF} "
+        [ "$deleted" -gt 0 ] && dirty+="${RED}D$deleted${OFF} "
+        [ "$untracked" -gt 0 ] && dirty+="${YELLOW}?$untracked${OFF} "
+        [ "$added" -gt 0 ] && dirty+="${PURPLE}A$added${OFF} "
+        [ "$unmerged" -gt 0 ] && dirty+="${CYAN}U$unmerged${OFF} "
+
+        dirty+="${BLUE}]${OFF}"
+      fi
+    fi
+
+    # define prompt with path info `\w`, git branch, and additional git
+    # information
+    local prompt="${BLUE}\w${OFF}${PURPLE}${branch}${OFF}${dirty}"
+
+    # prefix icon depends on whether $USER is under its home directory or not
+    local ICON_PREFIX=""
+    if ! pwd | grep -q "$USER"; then
+      ICON_PREFIX="${RED}${OFF} "
+    fi
+
+    # augment the prompt with an icon that changes color depending on the
+    # `exitstatus` of the last command ran
+    #
+    # CYAN icon             -- if exit success
+    # (exitstatus) RED icon -- if exit failure
+    local ICON="➜" # INFO: Other icons -         λ     ➜
+    if [ "$exitstatus" -eq 0 ]; then
+      PS1="${prompt}\n${ICON_PREFIX}${CYAN}${ICON} ${OFF}"
+    else
+      PS1="${prompt}\n"
+      PS1+="${RED}(${OFF}${YELLOW}$exitstatus${OFF}${RED})${OFF} "
+      PS1+="${ICON_PREFIX}${RED}${ICON} ${OFF}"
+    fi
+  }
+
   PROMPT_COMMAND=__prompt_command
 else
   # INFO: colors format for linux console generated using
