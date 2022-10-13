@@ -25,7 +25,7 @@ fi
 #
 
 # set default wallpaper
-[ -f ~.local/share/wallpapers/default.jpg ] && hsetroot -cover \
+[ -f ~/.local/share/wallpapers/default.jpg ] && hsetroot -cover \
   ~/.local/share/wallpapers/default.jpg &
 
 # fix mouse pointer
