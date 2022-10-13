@@ -144,10 +144,10 @@ super + ctrl + alt + l
 
 # launch browser
 super + b
-    librewolf
+    brave
 
 super + alt + b
-    librewolf --private-window
+    brave --incognito
 
 # powermenu
 super + q

@@ -33,7 +33,7 @@ bspc config presel_feedback_color "#d8dee9"
 
 # WM_CLASS rules for apps
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a LibreWolf desktop='^10' follow=on
+bspc rule -a Brave-browser desktop='^10' follow=on
 bspc rule -a Emacs desktop='^9' state=tiled follow=on
 bspc rule -a Zathura state=tiled
 bspc rule -a qemu-system-x86_64 desktop='^7' state=tiled follow=on

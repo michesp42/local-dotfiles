@@ -54,7 +54,7 @@ export XCOMPOSECACHE="$XDG_CACHE_HOME"/X11/xcompose
 
 # user preference
 export EDITOR=vim
-export BROWSER=librewolf
+export BROWSER=brave
 export TERMINAL=alacritty
 
 # export STARSHIP_CONFIG="$XDG_CONFIG_HOME"/starship/starship.toml
