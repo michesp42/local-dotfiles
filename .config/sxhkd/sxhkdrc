@@ -163,7 +163,7 @@ super + o
 
 # find and open file
 super + shift + f
-    pcmanfm
+    nemo
 
 # change wallpapers
 super + alt + c
