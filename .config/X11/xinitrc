@@ -25,8 +25,8 @@ fi
 #
 
 # set default wallpaper
-DEFAULT_WALLPAPER="$XDG_DATA_HOME"/wallpapers/default.jpg
-[ -f "$DEFAULT_WALLPAPER" ] && set-wallpaper "$DEFAULT_WALLPAPER" &
+[ -f ~.local/share/wallpapers/default.jpg ] && hsetroot -cover \
+  ~/.local/share/wallpapers/default.jpg &
 
 # fix mouse pointer
 xsetroot -cursor_name left_ptr &
