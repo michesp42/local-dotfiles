@@ -6,6 +6,13 @@
 
 alias dots='/usr/bin/git --git-dir="$HOME"/.local/dotfiles --work-tree="$HOME"'
 
+# make the following commands interactive, i.e., prompt me for confirmation
+# before performing their action especially when they are about to overwrite a
+# file
+alias cp='cp --interactive'
+alias mv='mv --interactive'
+alias rm='rm --interactive=always'
+
 if [ "$TERM" != "linux" ]; then
 
   # an almost better cd command
