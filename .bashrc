@@ -93,9 +93,19 @@ if [ "$TERM" != "linux" ]; then
       fi
     fi
 
+    # add warning icon to prompt if there are changes in dotfiles bare
+    # repository
+    local dots_changed
+    local dots_icon
+
+    dots_changed=$(/usr/bin/git --git-dir="$HOME"/.local/dotfiles \
+      --work-tree="$HOME" status -s)
+    [ -n "$dots_changed" ] && dots_icon="  "
+
     # define prompt with path info `\w`, git branch, and additional git
     # information
-    local prompt="${BLUE}\w${OFF}${PURPLE}${branch}${OFF}${dirty}"
+    local prompt="${YELLOW}${dots_icon}${OFF}${BLUE}\w${OFF}${PURPLE}\
+      ${branch}${OFF}${dirty}"
 
     # prefix icon depends on whether $USER is under its home directory or not
     local ICON_PREFIX=""
