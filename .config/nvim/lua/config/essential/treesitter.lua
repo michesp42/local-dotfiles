@@ -23,6 +23,7 @@ nvim_treesitter_config.setup {
     'lua',
     'make',
     'markdown',
+    'markdown_inline',
     'python',
     'rasi',
     'rust',
