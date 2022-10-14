@@ -139,6 +139,14 @@ else
   \e]PFeceff4
   "
   clear
+
+  GREEN="\[\e[32;1m\]"
+  BLUE="\[\e[34;1m\]"
+  PURPLE="\[\e[35;1m\]"
+  CYAN="\[\e[36;1m\]"
+  OFF="\[\033[m\]"
+
+  PS1="${BLUE}\u${OFF}@${PURPLE}\h${OFF} ${CYAN}\w${OFF}\n ${BLUE}\$${OFF} "
 fi
 
 # shellcheck source=/home/mice/.bash_aliases
