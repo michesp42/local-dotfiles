@@ -82,6 +82,10 @@ frame_color = "#bf616a"
 timeout = 20
 icon = /home/mice/.config/dunst/icons/warning.png
 
-# [play_sound]
-# 	summary = "*"
-# 	script = "/home/mice/.local/bin/local-dunst-sound"
+[battery_low]
+summary = "Battery low"
+script = "/home/mice/.local/scripts/notification-sound"
+
+[battery_full]
+summary = "Battery full"
+script = "/home/mice/.local/scripts/notification-sound"
