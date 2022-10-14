@@ -44,6 +44,8 @@ set list
 set showbreak =↪\ 
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:· ",eol:↴
 set nohlsearch
+set cursorline
+set colorcolumn=80
 
 " Minimal look
 " set shortmess=F
