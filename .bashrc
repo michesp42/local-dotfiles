@@ -100,7 +100,7 @@ if [ "$TERM" != "linux" ]; then
 
     dots_changed=$(/usr/bin/git --git-dir="$HOME"/.local/dotfiles \
       --work-tree="$HOME" status -s)
-    [ -n "$dots_changed" ] && dots_icon="  "
+    [ -n "$dots_changed" ] && dots_icon=" "
 
     # define prompt with path info `\w`, git branch, and additional git
     # information
