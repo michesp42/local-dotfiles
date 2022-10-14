@@ -61,6 +61,10 @@ $if mode=vi
 	Control-p: history-search-backward
 	set keymap vi-insert
 	Control-n: history-search-forward
+	set keymap vi-insert
+	Control-a: beginning-of-line
+	set keymap vi-insert
+	Control-e: end-of-line
 
 	# add fancy icon in bash prompt to indicate vi-mode when not in linux
 	# console otherwise just colorize the vi-mode indicator
