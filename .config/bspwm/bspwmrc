@@ -41,3 +41,6 @@ bspc rule -a qemu-system-x86_64 desktop='^7' state=tiled follow=on
 
 # rules for custom WM_CLASSes
 bspc rule -a scratchpad state=floating
+bspc rule -a ncmpcpp state=floating
+bspc rule -a btm state=floating
+bspc rule -a htop state=floating
