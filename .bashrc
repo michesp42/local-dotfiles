@@ -105,7 +105,7 @@ if [ "$TERM" != "linux" ]; then
     # define prompt with path info `\w`, git branch, and additional git
     # information
     local prompt="${YELLOW}${dots_icon}${OFF}${BLUE}\w${OFF}${PURPLE}\
-      ${branch}${OFF}${dirty}"
+${branch}${OFF}${dirty}"
 
     # prefix icon depends on whether $USER is under its home directory or not
     local ICON_PREFIX
