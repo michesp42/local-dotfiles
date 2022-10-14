@@ -108,7 +108,7 @@ if [ "$TERM" != "linux" ]; then
       ${branch}${OFF}${dirty}"
 
     # prefix icon depends on whether $USER is under its home directory or not
-    local ICON_PREFIX=""
+    local ICON_PREFIX
     if ! pwd | grep -q "$USER"; then
       ICON_PREFIX="${RED}${OFF} "
     fi
