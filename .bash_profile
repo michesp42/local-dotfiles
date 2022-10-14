@@ -83,5 +83,5 @@ export LESS_TERMCAP_us=$'\e[1;4;35m' # key terms?
 
 # autostart X at login
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx "$XDG_CONFIG_HOME/X11/xinitrc"
+  pgrep bspwm || exec startx "$XDG_CONFIG_HOME/X11/xinitrc"
 fi
