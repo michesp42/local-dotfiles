@@ -80,12 +80,14 @@ if [ "$TERM" != "linux" ]; then
         untracked=$(echo "$git_status" | grep -c -E "^\?\?")
         added=$(echo "$git_status" | grep -c -E "^A")
         unmerged=$(echo "$git_status" | grep -c -E "^U")
+        renamed=$(echo "$git_status" | grep -c -E "^R")
 
         [ "$modified" -gt 0 ] && dirty+="${GREEN}M$modified${OFF} "
         [ "$deleted" -gt 0 ] && dirty+="${RED}D$deleted${OFF} "
         [ "$untracked" -gt 0 ] && dirty+="${YELLOW}?$untracked${OFF} "
         [ "$added" -gt 0 ] && dirty+="${PURPLE}A$added${OFF} "
         [ "$unmerged" -gt 0 ] && dirty+="${CYAN}U$unmerged${OFF} "
+        [ "$renamed" -gt 0 ] && dirty+="${CYAN}R$renamed${OFF} "
 
         dirty+="${BLUE}]${OFF}"
       fi
