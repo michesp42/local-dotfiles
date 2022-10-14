@@ -75,11 +75,11 @@ if [ "$TERM" != "linux" ]; then
         local dirty=" ${BLUE}[${OFF} "
 
         git_status="$(git status -s)"
-        modified=$(echo "$git_status" | grep -c '^ M')
-        deleted=$(echo "$git_status" | grep -c '^ D')
-        untracked=$(echo "$git_status" | grep -c '^??')
-        added=$(echo "$git_status" | grep -c '^A')
-        unmerged=$(echo "$git_status" | grep -c '^U')
+        modified=$(echo "$git_status" | grep -c -E "^ *M")
+        deleted=$(echo "$git_status" | grep -c -E "^ *D")
+        untracked=$(echo "$git_status" | grep -c -E "^\?\?")
+        added=$(echo "$git_status" | grep -c -E "^A")
+        unmerged=$(echo "$git_status" | grep -c -E "^U")
 
         [ "$modified" -gt 0 ] && dirty+="${GREEN}M$modified${OFF} "
         [ "$deleted" -gt 0 ] && dirty+="${RED}D$deleted${OFF} "
