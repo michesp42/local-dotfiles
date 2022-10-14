@@ -1,0 +1,74 @@
+#
+# ~/.config/readline/inputrc
+#
+
+# system-wide inputrc
+$include /etc/inputrc
+
+#
+# prettify (completion) outputs
+#
+
+# Color files by types
+# NOTE: This may cause completion to text blink in some terminals (e.g. xterm).
+set colored-stats On
+
+# Append char to indicate type, similar to `ls -F`
+set visible-stats On
+
+# Mark symlinked directories
+set mark-symlinked-directories On
+
+# Color the common prefix, e.g., if the user types `cd dir` then `dir`, the
+# completion-prefix, will be highlighted with a color in the completion
+# candidates
+set colored-completion-prefix On
+
+# Color the common prefix in menu-complete
+set menu-complete-display-prefix On
+
+#
+# completion settings
+#
+
+# don't wait for me to hit tab twice before showing completions
+set show-all-if-ambiguous
+
+# as the setting name suggests, completions will be case insensitive, i.e., `cd
+# dir<TAB>` could possibly be completed to `cd Dirname` if such a directory
+# exists
+set completion-ignore-case
+
+#
+# EMACS or VI keybindings?
+# I like both so I us one or the other when I feel like it
+#
+
+# Uncomment the following to use vi-mode
+
+set editing-mode vi
+set keymap vi
+set show-mode-in-prompt on
+
+# additional configuration for vi-mode
+$if mode=vi
+	# I'd still like to use the following default keybindings even in vi-mode
+	set keymap vi-command
+	Control-l: clear-screen
+	set keymap vi-insert
+	Control-l: clear-screen
+	set keymap vi-insert
+	Control-p: history-search-backward
+	set keymap vi-insert
+	Control-n: history-search-forward
+
+	# add fancy icon in bash prompt to indicate vi-mode when not in linux
+	# console otherwise just colorize the vi-mode indicator
+	$if term=linux
+		set vi-ins-mode-string "\1\e[34;1m\2(ins)\1\e[0m\2"
+		set vi-cmd-mode-string "\1\e[33;1m\2(cmd)\1\e[0m\2"
+	$else
+		set vi-ins-mode-string "\1\e[34;1m\2 \1\e[0m\2"
+		set vi-cmd-mode-string "\1\e[33;1m\2 \1\e[0m\2"
+	$endif
+$endif
