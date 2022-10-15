@@ -674,7 +674,7 @@
 
 (use-package tree-sitter-langs)
 
-(setq c-basic-offset 2)
+(setq c-basic-offset 4)
 (add-hook 'c-mode-hook 'eglot-ensure)
 (add-hook 'c++-mode-hook 'eglot-ensure)
 
