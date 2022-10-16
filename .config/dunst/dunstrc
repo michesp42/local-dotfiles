@@ -326,10 +326,6 @@
     timeout = 20
     icon = /home/mice/.config/dunst/icons/warning.png
 
-[battery_low]
-    summary = "Battery low"
-    script = "/home/mice/.local/scripts/notification-sound"
-
-[battery_full]
-    summary = "Battery full"
+[battery]
+    summary = "Battery*"
     script = "/home/mice/.local/scripts/notification-sound"
