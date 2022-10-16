@@ -46,9 +46,9 @@ set completion-ignore-case
 
 # Uncomment the following to use vi-mode
 
-set editing-mode vi
-set keymap vi
-set show-mode-in-prompt on
+# set editing-mode vi
+# set keymap vi
+# set show-mode-in-prompt on
 
 # additional configuration for vi-mode
 $if mode=vi
