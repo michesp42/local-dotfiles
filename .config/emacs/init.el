@@ -405,15 +405,6 @@
                    :kill-buffer t
                    :jump-to-captured t))))
 
-(use-package avy
-  :config
-  (global-set-key (kbd "C-:") 'avy-goto-char)
-  (global-set-key (kbd "C-'") 'avy-goto-char-2)
-  (global-set-key (kbd "M-G f") 'avy-goto-line)
-  (global-set-key (kbd "M-G w") 'avy-goto-word-1)
-  (global-set-key (kbd "M-G e") 'avy-goto-word-0)
-  (global-set-key (kbd "C-c C-j") 'avy-resume))
-
 (use-package vertico
   :custom
   (vertico-cycle t)
