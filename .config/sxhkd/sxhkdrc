@@ -188,6 +188,8 @@ super + alt + 3
     scratchpad btm
 super + alt + 4
     scratchpad htop
+super + alt + 0
+    scratchpad calculator
 
 #
 # hardware control and special keys
