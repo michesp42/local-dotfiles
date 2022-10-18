@@ -4,6 +4,7 @@
 # ~/.bash_aliases
 #
 
+# alias for my dotfiles git bare repository
 alias dots='/usr/bin/git --git-dir="$HOME"/.local/dotfiles --work-tree="$HOME"'
 
 # make the following commands interactive, i.e., prompt me for confirmation
