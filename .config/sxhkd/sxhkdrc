@@ -177,6 +177,10 @@ super + alt + c
 super + alt + p
     polybar-msg cmd restart &>/dev/null
 
+# restart polybar
+super + alt + w
+    rofi-search-arch-wiki
+
 #
 # scratchpads
 #
