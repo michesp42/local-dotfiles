@@ -45,3 +45,11 @@
 *.color13: nord15
 *.color14: nord7
 *.color15: nord6
+
+! Neo Simple X Image Viewer (nsxiv) configuration
+Nsxiv.window.background:  nord0
+Nsxiv.window.foregrouned:  nord4
+Nsxiv.bar.font:  Ubuntu:style=bold:size=12
+Nsxiv.bar.background:  nord8
+Nsxiv.bar.foreground:  nord1
+Nsxiv.mark.foreground:  nord12
