@@ -14,6 +14,9 @@ alias cp='cp --interactive'
 alias mv='mv --interactive'
 alias rm='rm --interactive=always'
 
+# colorize the `ip` command
+alias ip='ip --color=auto'
+
 if [ "$TERM" != "linux" ]; then
 
   # an almost better cd command
