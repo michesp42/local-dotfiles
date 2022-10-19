@@ -14,8 +14,9 @@ alias cp='cp --interactive'
 alias mv='mv --interactive'
 alias rm='rm --interactive=always'
 
-# colorize the `ip` command
+# colorize the following commands
 alias ip='ip --color=auto'
+alias grep='grep --color=auto'
 
 if [ "$TERM" != "linux" ]; then
 
