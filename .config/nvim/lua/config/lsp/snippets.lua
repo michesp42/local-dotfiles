@@ -4,7 +4,7 @@ if not ok then
   return
 end
 
-require('luasnip.loaders.from_vscode').load()
+require('luasnip.loaders.from_vscode').lazy_load()
 
 ls.config.set_config {
   history = true,
