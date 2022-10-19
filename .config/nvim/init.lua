@@ -26,6 +26,7 @@ require 'config.helpful.gitsigns'
 require 'config.helpful.nvim-highlight-colors'
 require 'config.helpful.terminal'
 require 'config.helpful.diffview'
+require 'config.helpful.writing'
 
 -- looks nice
 require 'config.whimsical.devicons'

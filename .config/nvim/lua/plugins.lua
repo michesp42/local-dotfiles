@@ -106,6 +106,10 @@ packer.startup(function(use)
   -- icons
   use 'kyazdani42/nvim-web-devicons'
 
+  -- distraction-free writing
+  use 'folke/zen-mode.nvim'
+  use 'folke/twilight.nvim'
+
   if packer_bootstrap then
     require('packer').sync()
   end
