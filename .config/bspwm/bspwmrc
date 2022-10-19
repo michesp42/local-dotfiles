@@ -44,4 +44,4 @@ bspc rule -a scratchpad state=floating
 bspc rule -a ncmpcpp state=floating
 bspc rule -a btm state=floating
 bspc rule -a htop state=floating
-bspc rule -a calculator state=floating
+bspc rule -a qalc state=floating
