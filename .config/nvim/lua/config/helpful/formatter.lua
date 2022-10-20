@@ -53,11 +53,11 @@ local formatterConfig = {
     end,
   },
 
-  -- tex = {
-  --   function()
-  --     return { exe = "latexindent", stdin = true }
-  --   end,
-  -- },
+  tex = {
+    function()
+      return { exe = 'latexindent', stdin = true }
+    end,
+  },
 
   -- haskell = {
   --   function()
