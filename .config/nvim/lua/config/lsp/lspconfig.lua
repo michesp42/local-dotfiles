@@ -1,4 +1,4 @@
-local ok, nvim_lspconfig = pcall(require, 'lspconfig')
+local ok, lspconfig = pcall(require, 'lspconfig')
 
 if not ok then
   return
@@ -49,13 +49,13 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 for _, lsp in ipairs(servers) do
-  nvim_lspconfig[lsp].setup {
+  lspconfig[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
   }
 end
 
-nvim_lspconfig.sumneko_lua.setup {
+lspconfig.sumneko_lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
@@ -78,7 +78,7 @@ nvim_lspconfig.sumneko_lua.setup {
 
 -- TODO: setup arduino language server with AVR board specific stuff ...
 -- TODO: when I finally have to use it
--- nvim_lspconfig.arduino_language_server.setup {
+-- lspconfig.arduino_language_server.setup {
 --   cmd = {
 --     'arduino-language-server',
 --     '-cli-config', '/path/to/arduino-cli.yaml',
