@@ -35,7 +35,7 @@ xsetroot -cursor_name left_ptr &
 pgrep -x mpd >/dev/null || mpd &
 
 # compositor for transparency
-pgrep -x picom >/dev/null || picom --experimental-backends &
+pgrep -x picom >/dev/null || picom --experimental-backends --daemon &
 
 # redshift to adjust display color temperature
 pgrep -x redshift >/dev/null || redshift &
