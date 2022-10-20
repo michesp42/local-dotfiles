@@ -93,6 +93,10 @@ local formatterConfig = {
   --     }
   --   end,
   -- },
+
+  ['*'] = {
+    require('formatter.filetypes.any').remove_trailing_whitespace,
+  },
 }
 
 local prettierConfig = function()
