@@ -34,15 +34,17 @@ end
 local servers = {
   'bashls',
   'clangd',
-  -- 'cssls',
+  'cssls',
   'gopls',
-  -- 'html'
+  'html',
+  'jdtls',
+  'jsonls',
   -- 'julials',
   'pyright',
   'rust_analyzer',
-  -- 'texlab',
-  -- 'tsserver',
-  -- 'vimls',
+  'texlab',
+  'tsserver',
+  'vimls',
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
