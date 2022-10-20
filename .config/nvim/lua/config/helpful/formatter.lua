@@ -129,4 +129,8 @@ for _, ft in ipairs(commonFT) do
   formatterConfig[ft] = { prettierConfig }
 end
 
-formatter.setup { logging = false, filetype = formatterConfig }
+formatter.setup {
+  logging = true,
+  log_level = vim.log.levels.WARN,
+  filetype = formatterConfig,
+}
