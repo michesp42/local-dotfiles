@@ -22,3 +22,9 @@ visualizer_look = "◆▋"
 user_interface = "alternative"
 follow_now_playing_lyrics = no
 progressbar_look = "▪▪▪"
+
+## Display Modes ##
+playlist_editor_display_mode = "columns"
+search_engine_display_mode = "columns"
+browser_display_mode = "columns"
+playlist_display_mode = "columns"
