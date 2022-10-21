@@ -38,8 +38,8 @@ nvim_treesitter_config.setup {
     'yaml',
   },
 
-  sync_install = true,
-  auto_install = false,
+  sync_install = false,
+  auto_install = true,
 
   highlight = {
     enable = true,
