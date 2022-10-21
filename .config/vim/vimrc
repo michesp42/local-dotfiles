@@ -83,5 +83,5 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 0
 let g:netrw_winsize = 25
 
-silent! colorscheme nord
+silent! colorscheme onedark
 highlight Comment cterm=italic gui=italic

@@ -94,7 +94,7 @@
     frame_width = 3
 
     # Defines color of the frame around the notification window.
-    frame_color = "#81a1c1"
+    frame_color = "#61afef"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -307,22 +307,22 @@
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
 [urgency_low]
-    background = "#2e3440"
-    foreground = "#d8dee9"
-    frame_color = "#a3be8c"
+    background = "#282c34"
+    foreground = "#abb2bf"
+    frame_color = "#98c379"
     icon = /home/mice/.config/dunst/icons/info.png
     timeout = 5
 
 [urgency_normal]
-    background = "#2e3440"
-    foreground = "#d8dee9"
+    background = "#282c34"
+    foreground = "#abb2bf"
     icon = /home/mice/.config/dunst/icons/notification.png
     timeout = 5
 
 [urgency_critical]
-    background = "#2e3440"
-    foreground = "#d8dee9"
-    frame_color = "#bf616a"
+    background = "#282c34"
+    foreground = "#abb2bf"
+    frame_color = "#e06c75"
     timeout = 20
     icon = /home/mice/.config/dunst/icons/warning.png
 
