@@ -19,5 +19,6 @@ visualizer_output_name = "my_fifo"
 visualizer_in_stereo = "yes"
 visualizer_type = "spectrum"
 visualizer_look = "◆▋"
+user_interface = "alternative"
 follow_now_playing_lyrics = no
 progressbar_look = "▪▪▪"
