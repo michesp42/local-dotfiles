@@ -10,8 +10,8 @@ export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_STATE_HOME="$HOME"/.local/state
 
-# default shell (bash) xdg customization
 export HISTFILE="$XDG_STATE_HOME"/bash/history
+export HISTCONTROL=ignoredups:erasedups # no duplicate entries
 
 # xdg with various programs
 export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME"/bash-completion/bash_completion
