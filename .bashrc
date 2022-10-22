@@ -10,15 +10,18 @@
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# append to the history file, don't overwrite it
-shopt -s histappend
+set -o noclobber # disable overwriting files via `>`, use `>|` instead
 
-# set the pattern `**` for pathname expansion context to match all files and
-# zero or more directories and subdirectories.
-shopt -s globstar
-
-# disable overwriting files via `>`, use `>|` instead
-set -o noclobber
+### SHOPT
+shopt -s histappend     # append to the history file, don't overwrite it
+shopt -s globstar       # set the pattern `**` for pathname expansion context to match all files and zero or more directories and subdirectories.
+shopt -s autocd         # change to named directory
+shopt -s cdspell        # autocorrects cd misspellings
+shopt -s cmdhist        # save multi-line commands in history as single line
+shopt -s dotglob        # includes filenames beginning with a `.' in the results of pathname expansion
+shopt -s histappend     # do not overwrite history
+shopt -s expand_aliases # expand aliases
+shopt -s checkwinsize   # checks term size when bash regains control
 
 # enable scrollback in vterm inside emacs
 if [ "$INSIDE_EMACS" = "vterm" ]; then
