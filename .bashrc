@@ -199,3 +199,8 @@ export ex
 
 # shellcheck source=/home/mice/.bash_aliases
 [ -r ~/.bash_aliases ] && . ~/.bash_aliases # load user's custom aliases
+
+# Add a little bling to the terminal. Yes, this is useless but I like it.
+if [ "$TERM" != "linux" ] && [ "$TERM" != "xterm-256color" ]; then
+  fm6000 -f ~/.local/share/fm6000/arch_logo.txt -c blue --not_de --de bspwm
+fi
