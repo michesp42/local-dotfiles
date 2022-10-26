@@ -37,7 +37,6 @@ local servers = {
   'cssls',
   'gopls',
   'html',
-  'jdtls',
   'jsonls',
   -- 'julials',
   'pyright',
