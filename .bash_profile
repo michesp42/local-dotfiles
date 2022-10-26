@@ -22,7 +22,6 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GOPATH="$XDG_DATA_HOME"/go
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
-export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
 export KICAD_SYMBOL_DIR="/usr/share/kicad/symbols"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
