@@ -39,6 +39,9 @@ packer.startup(function(use)
   -- lsp
   use 'neovim/nvim-lspconfig'
 
+  -- Eclipse JDT language server
+  use 'mfussenegger/nvim-jdtls'
+
   -- linting to complement lsp
   -- use 'mfussenegger/nvim-lint'
 
