@@ -45,6 +45,6 @@ map('t', '<A-e>', '<cmd>lua require "FTerm".exit()<cr>')
 -- custom functions
 map('n', '<leader>sn', '<cmd>lua require "config.custom.telescope".search_nvimrc()<cr>')
 
--- autoformatter keymaps 
+-- autoformatter keymaps
 map('n', '<leader>bf', '<cmd>Format<cr>')
 map('n', '<leader>bw', '<cmd>FormatWrite<cr>')
