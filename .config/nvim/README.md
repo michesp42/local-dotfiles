@@ -1,5 +1,7 @@
 # Neovim Lua Configuration
 
+![Neovim screenshot](./.assets/nvim.png)
+
 ## Dependencies
 
 This configuration needs at least `NVIM v0.8.0` to work along with the external
