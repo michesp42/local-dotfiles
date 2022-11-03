@@ -26,9 +26,12 @@ export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
 export KICAD_SYMBOL_DIR="/usr/share/kicad/symbols"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 export LEIN_HOME="$XDG_DATA_HOME"/lein
+export MYPY_CACHE_DIR="$XDG_CACHE_HOME"/mypy
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+export PYLINTHOME="$XDG_CACHE_HOME"/pylint
+export PYLINTRC="$XDG_CONFIG_HOME"/pylint/pylintrc
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export SQLITE_HISTORY="$XDG_DATA_HOME"/sqlite_history
 export TERMINFO="$XDG_DATA_HOME"/terminfo
@@ -79,6 +82,7 @@ export LESS_TERMCAP_us=$'\e[1;4;35m' # key terms?
 
 [ -d "$HOME"/.local/bin ] && PATH="$PATH:$HOME/.local/bin"
 [ -d "$HOME"/.local/scripts ] && PATH="$PATH:$HOME/.local/scripts"
+[ -d "$GOPATH"/bin ] && PATH="$PATH:$GOPATH/bin"
 
 # shellcheck source=/home/mice/.bashrc
 [ -f ~/.bashrc ] && . ~/.bashrc
