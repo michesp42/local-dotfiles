@@ -37,7 +37,7 @@ dependencies listed in following subsections.
 - [shellcheck](https://www.shellcheck.net/)
 - [vint](https://github.com/Vimjas/vint)
 - [yamllint](http://www.yamllint.com/)
-- (https://fennel-lang.org/)[fennel]
+- [https://fennel-lang.org/](fennel)
 
 ### Formatters
 
