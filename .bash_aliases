@@ -42,6 +42,17 @@ alias ytap-vorbis='yt-dlp --yes-playlist --ignore-errors --output "%(title)s.%(e
 alias ytap-wav='yt-dlp --yes-playlist --ignore-errors --output "%(title)s.%(ext)s" --extract-audio --audio-format wav'
 alias ytvp-best='yt-dlp --yes-playlist --ignore-errors --output "%(title)s.%(ext)s" -f bestvideo+bestaudio'
 
+# aliases to check weather
+weather() {
+  [ -n "$1" ] && curl wttr.in/"$1"?0
+}
+export weather
+
+forecast() {
+  [ -n "$1" ] && curl wttr.in/"$1"
+}
+export forecast
+
 ### aliases to be load if not in linux console
 
 if [ "$TERM" != "linux" ]; then
