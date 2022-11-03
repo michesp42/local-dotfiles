@@ -8,6 +8,10 @@
 super + Return
     alacritty
 
+# alternative terminal emulator
+super + shift + Return
+    kitty
+
 # program launcher
 super + @space
     rofi-launcher
