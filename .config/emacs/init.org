@@ -37,7 +37,7 @@ I am using JetBrains Mono [[https://www.nerdfonts.com/][Nerd Font]] for the /def
 
 #+begin_src emacs-lisp
 
-  (defvar mice/default-font-size 115)
+  (defvar mice/default-font-size 117)
   (defvar mice/default-variable-font-size 140)
 
   (defun mice/set-font-faces ()
@@ -959,7 +959,7 @@ Colorizing strings that represent colors.
   ;; (use-package haskell-mode)
 
 #+end_src
-
+** 
 ** Julia
 
 *** julia-mode

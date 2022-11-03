@@ -16,7 +16,7 @@
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
 
-(defvar mice/default-font-size 115)
+(defvar mice/default-font-size 117)
 (defvar mice/default-variable-font-size 140)
 
 (defun mice/set-font-faces ()
