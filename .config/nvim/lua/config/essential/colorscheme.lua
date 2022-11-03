@@ -6,7 +6,7 @@ end
 
 local highlights = {
 
-  -- hightlights for cmp
+  -- highlights for cmp
 
   PmenuSel = { bg = '#282C34', fg = 'NONE' },
   Pmenu = { fg = '#C5CDD9', bg = '#22252A' },
