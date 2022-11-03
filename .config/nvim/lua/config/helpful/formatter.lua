@@ -4,102 +4,94 @@ if not ok then
   return
 end
 
-local function myclangformat()
-  return function()
-    return {
-      exe = 'clang-format',
-      args = {
-        '-style="{BasedOnStyle: google, IndentWidth: 4}"',
-        '--assume-filename',
-        vim.api.nvim_buf_get_name(0),
-      },
-      stdin = true,
-      cwd = vim.fn.expand '%:p:h',
-    }
-  end
-end
-
-local formatterConfig = {
-  arduino = { myclangformat() },
-  c = { myclangformat() },
-  cpp = { myclangformat() },
-  java = { myclangformat() },
-
-  rust = {
-    function()
-      return { exe = 'rustfmt', args = { '--emit=stdout' }, stdin = true }
-    end,
-  },
-
-  sh = {
-    function()
-      return { exe = 'shfmt', args = { '-i', 2 }, stdin = true }
-    end,
-  },
-
-  lua = {
+local formatter_config = {
+  fennel = {
     function()
       return {
-        exe = 'stylua',
-        args = { '-f ~/.config/stylua/stylua.toml -' },
-        stdin = true,
-      }
-    end,
-  },
-
-  python = {
-    function()
-      return { exe = 'black', args = { '-l 79 -' }, stdin = true }
-    end,
-  },
-
-  tex = {
-    function()
-      return { exe = 'latexindent', stdin = true }
-    end,
-  },
-
-  -- haskell = {
-  --   function()
-  --     return { exe = "ormolu", stdin = true }
-  --   end,
-  -- },
-
-  -- toml = {
-  --   function()
-  --     return { exe = "taplo", args = { "fmt -" }, stdin = true }
-  --   end,
-  -- },
-
-  go = {
-    function()
-      return {
-        exe = 'gofmt',
+        exe = 'fnlfmt',
         args = { vim.api.nvim_buf_get_name(0) },
         stdin = true,
       }
     end,
   },
 
-  -- fortran = {
-  --   function()
-  --     return {
-  --       exe = "fprettify",
-  --       args = {
-  --         "--silent --indent 2",
-  --         vim.api.nvim_buf_get_name(0),
-  --       },
-  --       stdin = true,
-  --     }
-  --   end,
-  -- },
+  go = {
+    require('formatter.filetypes.go').gofmt(),
+  },
+
+  java = {
+    function()
+      return {
+        exe = 'clang-format',
+        args = {
+          '--style=google',
+          '--assume-filename',
+          vim.api.nvim_buf_get_name(0),
+        },
+        stdin = true,
+      }
+    end,
+  },
+
+  lua = {
+    require('formatter.filetypes.lua').stylua,
+  },
+
+  python = {
+    require('formatter.filetypes.python').black(),
+  },
+
+  rust = {
+    require('formatter.filetypes.rust').rustfmt(),
+  },
+
+  sh = {
+    function()
+      return {
+        exe = 'shfmt',
+        args = { '-i', 2 },
+        stdin = true,
+      }
+    end,
+  },
+
+  tex = {
+    require('formatter.filetypes.latex').latexindent(),
+  },
+
+  toml = {
+    require('formatter.filetypes.toml').taplo(),
+  },
 
   ['*'] = {
     require('formatter.filetypes.any').remove_trailing_whitespace,
   },
 }
 
-local prettierConfig = function()
+local my_clangformat = function()
+  return {
+    exe = 'clang-format',
+    args = {
+      '-style="{BasedOnStyle: chromium, IndentWidth: 4, AccessModifierOffset: -4}"',
+      '--assume-filename',
+      vim.api.nvim_buf_get_name(0),
+    },
+    stdin = true,
+    cwd = vim.fn.expand '%:p:h',
+  }
+end
+
+local c_like_ft = {
+  'arduino',
+  'c',
+  'cpp',
+}
+
+for _, ft in ipairs(c_like_ft) do
+  formatter_config[ft] = { my_clangformat }
+end
+
+local prettier_config = function()
   return {
     exe = 'prettier',
     args = {
@@ -111,7 +103,7 @@ local prettierConfig = function()
   }
 end
 
-local commonFT = {
+local prettier_supported_ft = {
   'css',
   'scss',
   'html',
@@ -124,13 +116,13 @@ local commonFT = {
   'yaml',
 }
 
--- set prettier as formatter for common filetypes above
-for _, ft in ipairs(commonFT) do
-  formatterConfig[ft] = { prettierConfig }
+-- set prettier as formatter for supported filetypes above
+for _, ft in ipairs(prettier_supported_ft) do
+  formatter_config[ft] = { prettier_config }
 end
 
 formatter.setup {
   logging = true,
   log_level = vim.log.levels.WARN,
-  filetype = formatterConfig,
+  filetype = formatter_config,
 }
