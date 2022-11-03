@@ -18,6 +18,7 @@ nvim_treesitter_config.setup {
     'go',
     'html',
     'http',
+    'java',
     'javascript',
     'json',
     'julia',
