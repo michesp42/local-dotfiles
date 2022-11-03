@@ -28,10 +28,6 @@ cmp.setup {
     end,
   },
 
-  window = {
-    documentation = cmp.config.window.bordered(),
-  },
-
   mapping = cmp.mapping.preset.insert {
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -70,6 +66,15 @@ cmp.setup {
   }, {
     { name = 'buffer' },
   }),
+
+  window = {
+    documentation = cmp.config.window.bordered(),
+    completion = {
+      winhighlight = 'Normal:Pmenu,FloatBorder:Pmenu,Search:None',
+      col_offset = -3,
+      side_padding = 0,
+    },
+  },
 
   formatting = {
     fields = { 'kind', 'abbr', 'menu' },
