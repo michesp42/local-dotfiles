@@ -104,7 +104,8 @@ packer.startup(function(use)
   use 'brenoprata10/nvim-highlight-colors'
 
   -- statusline plugin
-  use 'nvim-lualine/lualine.nvim'
+  -- use 'rebelot/heirline.nvim'
+  use 'windwp/windline.nvim'
 
   -- icons
   use 'kyazdani42/nvim-web-devicons'
