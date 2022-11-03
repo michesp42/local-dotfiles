@@ -43,7 +43,7 @@ packer.startup(function(use)
   use 'mfussenegger/nvim-jdtls'
 
   -- linting to complement lsp
-  -- use 'mfussenegger/nvim-lint'
+  use 'mfussenegger/nvim-lint'
 
   -- snippets
   use 'L3MON4D3/LuaSnip'

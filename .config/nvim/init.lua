@@ -11,6 +11,7 @@ require 'impatient'
 require 'config.essential.colorscheme'
 require 'config.essential.telescope'
 require 'config.essential.treesitter'
+require 'config.essential.lint'
 require 'config.essential.undotree'
 
 -- lsp config
