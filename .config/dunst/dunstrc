@@ -327,5 +327,5 @@
     icon = /home/mice/.config/dunst/icons/warning.png
 
 [battery]
-    summary = "Battery*"
+    summary = "*Battery*"
     script = "/home/mice/.local/scripts/notification-sound"
