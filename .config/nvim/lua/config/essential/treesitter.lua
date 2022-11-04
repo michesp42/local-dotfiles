@@ -20,7 +20,6 @@ nvim_treesitter_config.setup {
     'fennel',
     'gitignore',
     'go',
-    'go.mod',
     'html',
     'http',
     'java',
