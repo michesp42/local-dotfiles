@@ -42,8 +42,11 @@ wo.relativenumber = true
 wo.linebreak = true
 
 wo.signcolumn = 'yes'
--- foldmethod = 'expr'
--- foldexpr = 'nvim_treesitter#foldexpr()'
+
+-- TODO: set this in Lua syntax
+-- set foldmethod=expr
+-- set foldexpr=nvim_treesitter#foldexpr()
+-- set nofoldenable                     " Disable folding at startup.
 
 g.wildignore = { '*.git/', '*.tags', '*.o', '*.class', '*.ccls-cache' }
 g.mapleader = ' '
