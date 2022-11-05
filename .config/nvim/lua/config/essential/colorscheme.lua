@@ -61,7 +61,7 @@ onedark.setup {
   },
   highlights = highlights,
   toggle_style_key = '<leader>ts',
-  toggle_style_list = { 'dark', 'light' },
+  toggle_style_list = { 'light', 'dark' },
 }
 
 onedark.load()
