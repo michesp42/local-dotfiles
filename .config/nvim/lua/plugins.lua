@@ -105,7 +105,7 @@ packer.startup(function(use)
 
   -- statusline plugin
   -- use 'rebelot/heirline.nvim'
-  use 'windwp/windline.nvim'
+  use 'nvim-lualine/lualine.nvim'
 
   -- icons
   use 'kyazdani42/nvim-web-devicons'
