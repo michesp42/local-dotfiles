@@ -181,7 +181,7 @@ super + alt + c
 super + alt + p
     polybar-msg cmd restart &>/dev/null
 
-# restart polybar
+# search my local copy of the Arch wiki
 super + alt + w
     rofi-search-arch-wiki
 
