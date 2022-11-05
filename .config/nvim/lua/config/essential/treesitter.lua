@@ -49,6 +49,18 @@ nvim_treesitter_config.setup {
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
+
+    -- WARNING: C# treesitter makes launching nvim slow, IDKW
+    -- disable = { 'c_sharp' },
+
+    -- NOTE: Disable treesitter for large file sizes
+    disable = function(lang, buf)
+      local max_filesize = 100 * 1024 -- 100 KB
+      local file_ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+      if file_ok and stats and stats.size > max_filesize then
+        return true
+      end
+    end,
   },
 
   incremental_selection = {
