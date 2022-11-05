@@ -60,6 +60,8 @@ onedark.setup {
     keywords = 'italic',
   },
   highlights = highlights,
+  toggle_style_key = '<leader>ts',
+  toggle_style_list = { 'dark', 'light' },
 }
 
 onedark.load()
