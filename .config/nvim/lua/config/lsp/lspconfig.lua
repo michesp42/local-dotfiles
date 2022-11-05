@@ -34,6 +34,7 @@ end
 local servers = {
   'bashls',
   'clangd',
+  'csharp_ls',
   'cssls',
   'gopls',
   'html',
