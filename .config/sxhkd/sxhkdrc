@@ -185,6 +185,10 @@ super + alt + p
 super + alt + w
     rofi-search-arch-wiki
 
+# open Java documentation in browser
+super + alt + u
+    xdg-open /usr/share/doc/java-openjdk/api/index.html
+
 #
 # scratchpads
 #
