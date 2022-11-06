@@ -81,18 +81,6 @@ for _, ft in ipairs(c_like_ft) do
   formatter_config[ft] = { my_clangformat }
 end
 
-local prettier_config = function()
-  return {
-    exe = 'prettier',
-    args = {
-      '--stdin-filepath',
-      vim.fn.shellescape(vim.api.nvim_buf_get_name(0)),
-      '--single-quote',
-    },
-    stdin = true,
-  }
-end
-
 local prettier_supported_ft = {
   'css',
   'scss',
@@ -108,7 +96,7 @@ local prettier_supported_ft = {
 
 -- set prettier as formatter for supported filetypes above
 for _, ft in ipairs(prettier_supported_ft) do
-  formatter_config[ft] = { prettier_config }
+  formatter_config[ft] = { require('formatter.filetypes.javascript').prettier }
 end
 
 formatter.setup {
