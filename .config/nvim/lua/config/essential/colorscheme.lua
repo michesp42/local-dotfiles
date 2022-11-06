@@ -51,7 +51,7 @@ local highlights = {
 
   -- additional highlights
 
-  MatchParen = { fg = '#da8548', bg = '#282c34' },
+  MatchParen = { fg = '#ff6c6b', bg = '#22252A' },
 }
 
 onedark.setup {
