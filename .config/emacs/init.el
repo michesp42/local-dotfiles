@@ -652,11 +652,11 @@
 
 (use-package eglot)
 
-;; (use-package format-all
-;;   :config
-;;   (setq format-all-formatters '(("Python" black) ("C" clang-format)))
-;;   ;; :bind (("C-x C-j" . format-all-buffer))
-;;   :hook (prog-mode . format-all-mode))
+(use-package format-all
+  :config
+  :hook
+  (prog-mode . format-all-mode)
+  (format-all-mode . format-all-ensure-formatter))
 
 (use-package tree-sitter
   :config
