@@ -20,17 +20,7 @@ local formatter_config = {
   },
 
   java = {
-    function()
-      return {
-        exe = 'clang-format',
-        args = {
-          '--style=google',
-          '--assume-filename',
-          vim.api.nvim_buf_get_name(0),
-        },
-        stdin = true,
-      }
-    end,
+    require('formatter.filetypes.cpp').clangformat,
   },
 
   lua = {
