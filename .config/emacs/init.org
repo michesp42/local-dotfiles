@@ -944,6 +944,17 @@ Colorizing strings that represent colors.
 
 #+end_src
 
+** C#
+
+#+begin_src emacs-lisp
+
+  (use-package csharp-mode
+    :ensure t
+    :config
+    (add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-tree-sitter-mode)))
+
+#+end_src
+
 ** Go
 
 #+begin_src emacs-lisp

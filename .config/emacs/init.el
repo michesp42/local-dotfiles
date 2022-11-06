@@ -672,6 +672,11 @@
 
 ;; (use-package sly)
 
+(use-package csharp-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-tree-sitter-mode)))
+
 (use-package go-mode
   :hook (go-mode . eglot-ensure))
 
