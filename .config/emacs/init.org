@@ -971,6 +971,17 @@ Colorizing strings that represent colors.
   ;; (use-package haskell-mode)
 
 #+end_src
+
+** Java
+
+#+begin_src emacs-lisp
+
+   (add-hook 'java-mode-hook (lambda ()
+                                (setq c-basic-offset 2
+                                      tab-width 2
+                                      indent-tabs-mode nil)))
+
+#+end_src
 ** 
 ** Julia
 
