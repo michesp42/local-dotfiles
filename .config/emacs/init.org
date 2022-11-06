@@ -920,6 +920,7 @@ Colorizing strings that represent colors.
     (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
 
   (use-package tree-sitter-langs)
+  (use-package tree-sitter-indent)
 
 #+end_src
 

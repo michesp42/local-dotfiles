@@ -664,6 +664,7 @@
   (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
 
 (use-package tree-sitter-langs)
+(use-package tree-sitter-indent)
 
 (setq c-basic-offset 4)
 (add-hook 'c-mode-hook 'eglot-ensure)
