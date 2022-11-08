@@ -42,6 +42,9 @@ alias ytap-vorbis='yt-dlp --yes-playlist --ignore-errors --output "%(title)s.%(e
 alias ytap-wav='yt-dlp --yes-playlist --ignore-errors --output "%(title)s.%(ext)s" --extract-audio --audio-format wav'
 alias ytvp-best='yt-dlp --yes-playlist --ignore-errors --output "%(title)s.%(ext)s" -f bestvideo+bestaudio'
 
+# `transmission-remote` is too long to type for my slow hands
+alias trrm='transmission-remote'
+
 # aliases to check weather
 weather() {
   [ -n "$1" ] && curl wttr.in/"$1"?0
