@@ -94,7 +94,7 @@ packer.startup(function(use)
   use 'mhartington/formatter.nvim'
 
   -- visual guide for keybindings
-  -- use 'folke/which-key.nvim'
+  use 'folke/which-key.nvim'
 
   -- git plugins
   use 'lewis6991/gitsigns.nvim'

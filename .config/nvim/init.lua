@@ -29,6 +29,7 @@ require 'config.helpful.terminal'
 require 'config.helpful.diffview'
 require 'config.helpful.writing'
 require 'config.helpful.todo-comments'
+require 'config.helpful.which-key'
 
 -- looks nice
 require 'config.whimsical.devicons'
