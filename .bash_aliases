@@ -58,7 +58,7 @@ export forecast
 
 ### aliases to be load if not in linux console
 
-if [ "$TERM" != "linux" ]; then
+if [ "$TERM" != "linux" ] && [ "$TERM" != "xterm-256color" ]; then
 
   # an almost better cd command
   bcd() {

@@ -37,7 +37,7 @@ PROMPT_DIRTRIM=3
 
 # if not in linux console, load the custom prompt
 # otherwise just load custom colors for the linux console
-if [ "$TERM" != "linux" ]; then
+if [ "$TERM" != "linux" ] && [ "$TERM" != "xterm-256color" ]; then
 
   # Using this function the bash prompt will display the current working
   # directory (with an icon that warns if outside of user's home directory),
