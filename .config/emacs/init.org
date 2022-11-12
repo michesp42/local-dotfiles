@@ -902,11 +902,9 @@ Colorizing strings that represent colors.
 
 #+begin_src emacs-lisp
 
-  (use-package format-all
+  (use-package apheleia
     :config
-    :hook
-    (prog-mode . format-all-mode)
-    (format-all-mode . format-all-ensure-formatter))
+    (apheleia-global-mode +1))
 
 #+end_src
 

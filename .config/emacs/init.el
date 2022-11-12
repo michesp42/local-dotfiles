@@ -652,11 +652,9 @@
 
 (use-package eglot)
 
-(use-package format-all
+(use-package apheleia
   :config
-  :hook
-  (prog-mode . format-all-mode)
-  (format-all-mode . format-all-ensure-formatter))
+  (apheleia-global-mode +1))
 
 (use-package tree-sitter
   :config
