@@ -936,22 +936,21 @@ Colorizing strings that represent colors.
 
 #+end_src
 
-** Common Lisp
-
-#+begin_src emacs-lisp
-
-  ;; (use-package sly)
-
-#+end_src
-
 ** C#
 
 #+begin_src emacs-lisp
 
   (use-package csharp-mode
-    :ensure t
     :config
     (add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-tree-sitter-mode)))
+
+#+end_src
+
+** Common Lisp
+
+#+begin_src emacs-lisp
+
+  ;; (use-package sly)
 
 #+end_src
 
@@ -976,12 +975,13 @@ Colorizing strings that represent colors.
 
 #+begin_src emacs-lisp
 
-   (add-hook 'java-mode-hook (lambda ()
-                                (setq c-basic-offset 2
-                                      tab-width 2
-                                      indent-tabs-mode nil)))
+  (add-hook 'java-mode-hook (lambda ()
+                              (setq c-basic-offset 2
+                                    tab-width 2
+                                    indent-tabs-mode nil)))
+  (add-hook 'java-mode-hook 'eglot-ensure)
 
-#+end_src
+  #+end_src
 ** 
 ** Julia
 

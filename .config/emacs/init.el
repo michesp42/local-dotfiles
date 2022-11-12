@@ -670,12 +670,11 @@
 (add-hook 'c-mode-hook 'eglot-ensure)
 (add-hook 'c++-mode-hook 'eglot-ensure)
 
-;; (use-package sly)
-
 (use-package csharp-mode
-  :ensure t
   :config
   (add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-tree-sitter-mode)))
+
+;; (use-package sly)
 
 (use-package go-mode
   :hook (go-mode . eglot-ensure))
@@ -683,9 +682,10 @@
 ;; (use-package haskell-mode)
 
 (add-hook 'java-mode-hook (lambda ()
-                             (setq c-basic-offset 2
-                                   tab-width 2
-                                   indent-tabs-mode nil)))
+                            (setq c-basic-offset 2
+                                  tab-width 2
+                                  indent-tabs-mode nil)))
+(add-hook 'java-mode-hook 'eglot-ensure)
 
 ;; (use-package julia-mode
 ;;   :hook
