@@ -1098,6 +1098,18 @@ Colorizing strings that represent colors.
 
 #+end_src
 
+** Scala
+
+#+begin_src emacs-lisp
+
+  (use-package scala-mode
+    :interpreter
+    ("scala" . scala-mode)
+    :config
+    (setq prettify-symbols-alist scala-prettify-symbols-alist))
+
+#+end_src
+
 ** Shell scripting
 
 #+begin_src emacs-lisp
