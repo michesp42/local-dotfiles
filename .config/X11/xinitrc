@@ -26,7 +26,7 @@ fi
 
 # set default wallpaper
 [ -f ~/.local/share/wallpapers/default.jpg ] && hsetroot -cover \
-  ~/.local/share/wallpapers/default.png &
+  ~/.local/share/wallpapers/default.jpg &
 
 # fix mouse pointer
 xsetroot -cursor_name left_ptr &

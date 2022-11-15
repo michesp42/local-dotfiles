@@ -1,67 +1,58 @@
-local ok, onedark = pcall(require, 'onedark')
+local ok, nordic = pcall(require, 'nordic')
 
 if not ok then
   return
 end
 
-local highlights = {
-
-  -- highlights for cmp
-
-  PmenuSel = { bg = '#282C34', fg = 'NONE' },
-  Pmenu = { fg = '#C5CDD9', bg = '#22252A' },
-
-  CmpItemAbbrDeprecated = { fg = '#7E8294', bg = 'NONE', fmt = 'strikethrough' },
-  CmpItemAbbrMatch = { fg = '#82AAFF', bg = 'NONE', fmt = 'bold' },
-  CmpItemAbbrMatchFuzzy = { fg = '#82AAFF', bg = 'NONE', fmt = 'bold' },
-  CmpItemMenu = { fg = '#C792EA', bg = 'NONE', fmt = 'italic' },
-
-  CmpItemKindField = { fg = '#EED8DA', bg = '#B5585F' },
-  CmpItemKindProperty = { fg = '#EED8DA', bg = '#B5585F' },
-  CmpItemKindEvent = { fg = '#EED8DA', bg = '#B5585F' },
-
-  CmpItemKindText = { fg = '#C3E88D', bg = '#9FBD73' },
-  CmpItemKindEnum = { fg = '#C3E88D', bg = '#9FBD73' },
-  CmpItemKindKeyword = { fg = '#C3E88D', bg = '#9FBD73' },
-
-  CmpItemKindConstant = { fg = '#FFE082', bg = '#D4BB6C' },
-  CmpItemKindConstructor = { fg = '#FFE082', bg = '#D4BB6C' },
-  CmpItemKindReference = { fg = '#FFE082', bg = '#D4BB6C' },
-
-  CmpItemKindFunction = { fg = '#EADFF0', bg = '#A377BF' },
-  CmpItemKindStruct = { fg = '#EADFF0', bg = '#A377BF' },
-  CmpItemKindClass = { fg = '#EADFF0', bg = '#A377BF' },
-  CmpItemKindModule = { fg = '#EADFF0', bg = '#A377BF' },
-  CmpItemKindOperator = { fg = '#EADFF0', bg = '#A377BF' },
-
-  CmpItemKindVariable = { fg = '#C5CDD9', bg = '#7E8294' },
-  CmpItemKindFile = { fg = '#C5CDD9', bg = '#7E8294' },
-
-  CmpItemKindUnit = { fg = '#F5EBD9', bg = '#D4A959' },
-  CmpItemKindSnippet = { fg = '#F5EBD9', bg = '#D4A959' },
-  CmpItemKindFolder = { fg = '#F5EBD9', bg = '#D4A959' },
-
-  CmpItemKindMethod = { fg = '#DDE5F5', bg = '#6C8ED4' },
-  CmpItemKindValue = { fg = '#DDE5F5', bg = '#6C8ED4' },
-  CmpItemKindEnumMember = { fg = '#DDE5F5', bg = '#6C8ED4' },
-
-  CmpItemKindInterface = { fg = '#D8EEEB', bg = '#58B5A8' },
-  CmpItemKindColor = { fg = '#D8EEEB', bg = '#58B5A8' },
-  CmpItemKindTypeParameter = { fg = '#D8EEEB', bg = '#58B5A8' },
-
-  -- additional highlights
-
-  MatchParen = { fg = '#ff6c6b', bg = '#22252A' },
+nordic.colorscheme {
+  underline_option = 'undercurl',
+  italic = false,
+  italic_comments = true,
+  minimal_mode = false,
+  alternate_backgrounds = true,
 }
 
-onedark.setup {
-  code_style = {
-    comments = 'italic',
-    keywords = 'italic',
-  },
-  highlights = highlights,
-  toggle_style_key = '<leader>ts',
-  toggle_style_list = { 'light', 'dark' },
-}
+-- vim.api.nvim_set_hl(0, 'TSFunction', { fg = '#88c0d0' })
+-- vim.api.nvim_set_hl(0, 'TSMethod', { fg = '#88c0d0' })
+-- vim.api.nvim_set_hl(0, 'TSConstructor', { fg = '#ebcb8b' })
 
-onedark.load()
+vim.api.nvim_set_hl(0, 'PmenuSel', { bg = '#373e4d', fg = 'NONE' })
+vim.api.nvim_set_hl(0, 'Pmenu', { fg = '#C5CDD9', bg = '#2b303b' })
+
+vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', { fg = '#7E8294', bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'CmpItemAbbrMatch', { fg = '#88c0d0', bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { fg = '#88c0d0', bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'CmpItemMenu', { fg = '#b48ead', bg = 'NONE' })
+
+vim.api.nvim_set_hl(0, 'CmpItemKindField', { fg = '#EED8DA', bg = '#bf616a' })
+vim.api.nvim_set_hl(0, 'CmpItemKindProperty', { fg = '#EED8DA', bg = '#bf616a' })
+vim.api.nvim_set_hl(0, 'CmpItemKindEvent', { fg = '#EED8DA', bg = '#bf616a' })
+
+vim.api.nvim_set_hl(0, 'CmpItemKindText', { fg = '#C3E88D', bg = '#a3be8c' })
+vim.api.nvim_set_hl(0, 'CmpItemKindEnum', { fg = '#C3E88D', bg = '#a3be8c' })
+vim.api.nvim_set_hl(0, 'CmpItemKindKeyword', { fg = '#C3E88D', bg = '#a3be8c' })
+
+vim.api.nvim_set_hl(0, 'CmpItemKindConstant', { fg = '#FFE082', bg = '#D4BB6C' })
+vim.api.nvim_set_hl(0, 'CmpItemKindConstructor', { fg = '#FFE082', bg = '#D4BB6C' })
+vim.api.nvim_set_hl(0, 'CmpItemKindReference', { fg = '#FFE082', bg = '#D4BB6C' })
+
+vim.api.nvim_set_hl(0, 'CmpItemKindFunction', { fg = '#EADFF0', bg = '#b48ead' })
+vim.api.nvim_set_hl(0, 'CmpItemKindStruct', { fg = '#EADFF0', bg = '#b48ead' })
+vim.api.nvim_set_hl(0, 'CmpItemKindClass', { fg = '#EADFF0', bg = '#b48ead' })
+vim.api.nvim_set_hl(0, 'CmpItemKindModule', { fg = '#EADFF0', bg = '#b48ead' })
+vim.api.nvim_set_hl(0, 'CmpItemKindOperator', { fg = '#EADFF0', bg = '#b48ead' })
+
+vim.api.nvim_set_hl(0, 'CmpItemKindVariable', { fg = '#C5CDD9', bg = '#7E8294' })
+vim.api.nvim_set_hl(0, 'CmpItemKindFile', { fg = '#C5CDD9', bg = '#7E8294' })
+
+vim.api.nvim_set_hl(0, 'CmpItemKindUnit', { fg = '#F5EBD9', bg = '#D4A959' })
+vim.api.nvim_set_hl(0, 'CmpItemKindSnippet', { fg = '#F5EBD9', bg = '#D4A959' })
+vim.api.nvim_set_hl(0, 'CmpItemKindFolder', { fg = '#F5EBD9', bg = '#D4A959' })
+
+vim.api.nvim_set_hl(0, 'CmpItemKindMethod', { fg = '#DDE5F5', bg = '#81a1c1' })
+vim.api.nvim_set_hl(0, 'CmpItemKindValue', { fg = '#DDE5F5', bg = '#81a1c1' })
+vim.api.nvim_set_hl(0, 'CmpItemKindEnumMember', { fg = '#DDE5F5', bg = '#81a1c1' })
+
+vim.api.nvim_set_hl(0, 'CmpItemKindInterface', { fg = '#D8EEEB', bg = '#8fbcbb' })
+vim.api.nvim_set_hl(0, 'CmpItemKindColor', { fg = '#D8EEEB', bg = '#8fbcbb' })
+vim.api.nvim_set_hl(0, 'CmpItemKindTypeParameter', { fg = '#D8EEEB', bg = '#8fbcbb' })
