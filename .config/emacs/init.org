@@ -155,7 +155,7 @@ Org mode needs to be loaded early probably because I'm using ~org-babel~.
     ;;      org-fontify-quote-and-verse-blocks t)
     (mice/org-font-setup))
 
-                            #+end_src
+#+end_src
 
 As with the font settings above, the following source block ensures that the the org-setup will be loaded when using emacs daemon.
 
