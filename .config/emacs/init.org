@@ -944,6 +944,16 @@ Colorizing strings that represent colors.
 
 #+end_src
 
+** Clojure
+
+#+begin_src emacs-lisp
+
+  (use-package clojure-mode
+    :hook
+    (clojure-mode . subword-mode))
+
+#+end_src
+
 ** Common Lisp
 
 #+begin_src emacs-lisp
