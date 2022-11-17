@@ -87,3 +87,14 @@ end, { desc = '[FTerm] Exit terminal' })
 -- autoformatter keymaps
 map('n', '<leader>bf', '<cmd>Format<cr>', { desc = 'autoformat buffer' })
 map('n', '<leader>bw', '<cmd>FormatWrite<cr>', { desc = 'autoformat buffer and save file' })
+
+-- NvimTree keymaps
+map('n', '<leader>nt', '<cmd>NvimTreeToggle<cr>', { desc = 'toggle nvim-tree' })
+map('n', '<leader>nf', '<cmd>NvimTreeFocus<cr>', { desc = 'open nvim-tree if it is closed, and the focus on it' })
+map(
+  'n',
+  '<leader>ns',
+  '<cmd>NvimTreeFindFile<cr>',
+  { desc = 'move the cursor for the current buffer, opening folders if needed' }
+)
+map('n', '<leader>nc', '<cmd>NvimTreeCollapse<cr>', { desc = 'collapse nvim-tree recursively' })
