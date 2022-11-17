@@ -63,13 +63,13 @@ map('n', '<leader>fn', function()
 end, { desc = 'find files in neovim config directory' })
 
 -- nvim-highlight-colors
-map('n', '<leader>ce', function()
+map('n', '<leader>xe', function()
   require('nvim-highlight-colors').turnOn()
 end, { desc = 'Turn on color highlighting' })
-map('n', '<leader>cd', function()
+map('n', '<leader>xd', function()
   require('nvim-highlight-colors').turnOff()
 end, { desc = 'Turn off color highlighting' })
-map('n', '<leader>ct', function()
+map('n', '<leader>xt', function()
   require('nvim-highlight-colors').toggle()
 end, { desc = 'Toggle color highlighting' })
 
