@@ -1,5 +1,6 @@
 -- init.lua
 
+require 'early-init'
 require 'plugins'
 require 'settings'
 require 'keymaps'
@@ -34,3 +35,4 @@ require 'config.helpful.which-key'
 -- looks nice
 require 'config.whimsical.devicons'
 require 'config.whimsical.statusline'
+require 'config.whimsical.nvim-tree'
