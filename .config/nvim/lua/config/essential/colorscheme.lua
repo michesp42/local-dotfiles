@@ -12,9 +12,8 @@ nordic.colorscheme {
   alternate_backgrounds = true,
 }
 
--- vim.api.nvim_set_hl(0, 'TSFunction', { fg = '#88c0d0' })
--- vim.api.nvim_set_hl(0, 'TSMethod', { fg = '#88c0d0' })
--- vim.api.nvim_set_hl(0, 'TSConstructor', { fg = '#ebcb8b' })
+vim.api.nvim_set_hl(0, '@function', { fg = '#88c0d0' })
+vim.api.nvim_set_hl(0, '@method', { fg = '#88c0d0' })
 
 vim.api.nvim_set_hl(0, 'PmenuSel', { bg = '#373e4d', fg = 'NONE' })
 vim.api.nvim_set_hl(0, 'Pmenu', { fg = '#C5CDD9', bg = '#2b303b' })
