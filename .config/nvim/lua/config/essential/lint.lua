@@ -19,6 +19,7 @@ lint.linters_by_ft = {
   fennel = { 'fennel' },
   go = { 'golangcilint', 'revive' },
   java = { 'checkstyle' },
+  javascript = { 'eslint' },
   lua = { 'luacheck' },
   python = { 'flake8', 'mypy', 'pycodestyle', 'pydocstyle', 'pylint' },
   -- rust = { 'clippy' },
