@@ -53,10 +53,10 @@ g.mapleader = ' '
 
 
 -- netrw config
-g.netrw_banner = 0
-g.netrw_liststyle = 3
-g.netrw_browse_split = 0
-g.netrw_winsize = 25
+-- g.netrw_banner = 0
+-- g.netrw_liststyle = 3
+-- g.netrw_browse_split = 0
+-- g.netrw_winsize = 25
 
 -- the following requires set list (?)
 -- opt.listchars:append 'eol:↴'
