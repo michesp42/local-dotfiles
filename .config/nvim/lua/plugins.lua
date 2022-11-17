@@ -108,7 +108,15 @@ packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim'
 
   -- icons
-  use 'kyazdani42/nvim-web-devicons'
+  use 'nvim-tree/nvim-web-devicons'
+
+  -- file explorer
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+    },
+  }
 
   -- highlight todo comments
   use {
