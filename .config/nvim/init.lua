@@ -6,7 +6,7 @@ require 'settings'
 require 'keymaps'
 
 -- improve startup
-require 'impatient'
+require('impatient').enable_profile()
 
 -- can't live without
 require 'config.essential.colorscheme'
