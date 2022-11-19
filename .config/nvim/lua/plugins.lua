@@ -27,11 +27,7 @@ packer.startup(function(use)
   use 'lewis6991/impatient.nvim'
 
   -- telescope: fuzzy finder and much more
-  use {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.x',
-    requires = { 'nvim-lua/plenary.nvim' },
-  }
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
 
   -- telescope extensions
   -- use {'axkirillov/easypick.nvim', requires = 'nvim-telescope/telescope.nvim'}
@@ -111,18 +107,10 @@ packer.startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
 
   -- file explorer
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons',
-    },
-  }
+  use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons' } }
 
   -- highlight todo comments
-  use {
-    'folke/todo-comments.nvim',
-    requires = 'nvim-lua/plenary.nvim',
-  }
+  use { 'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim' }
 
   -- distraction-free writing
   use 'folke/zen-mode.nvim'
