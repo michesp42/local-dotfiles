@@ -59,7 +59,7 @@ g.mapleader = ' '
 -- g.netrw_winsize = 25
 
 -- the following requires set list (?)
--- opt.listchars:append 'eol:↴'
+-- opt.listchars:append 'eol:↲'
 opt.listchars:append 'tab:» '
 opt.listchars:append 'trail:·'
 opt.listchars:append 'precedes:←'
