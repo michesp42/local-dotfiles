@@ -30,7 +30,7 @@ o.hlsearch = false
 o.colorcolumn = '0'
 -- o.completeopt = 'menu,menuone,noselect,noinsert'
 o.diffopt = 'internal,filler,closeoff,algorithm:patience,iwhiteall'
-o.mouse = 'a'
+o.mouse = ''
 o.showbreak = '↪ '
 o.background = 'dark'
 
