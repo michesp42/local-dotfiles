@@ -94,9 +94,6 @@ endif
 
 call plug#begin()
 
-" A collection of language packs for Vim
-Plug 'sheerun/vim-polyglot'
-
 " One Dark theme
 Plug 'arcticicestudio/nord-vim'
 
