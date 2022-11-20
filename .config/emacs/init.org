@@ -608,6 +608,17 @@ Colorizing strings that represent colors.
 
 #+end_src
 
+*** Highlight-indent-guides
+
+#+begin_src emacs-lisp
+
+  (use-package highlight-indent-guides
+    :config
+    (setq highlight-indent-guides-method 'character)
+    :hook (prog-mode . highlight-indent-guides-mode))
+
+#+end_src
+
 ** Yasnippet
 
 #+begin_src emacs-lisp
