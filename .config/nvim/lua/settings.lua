@@ -10,6 +10,7 @@ o.scrolloff = 8
 o.sidescrolloff = 8
 o.laststatus = 3 -- global statusline
 o.timeoutlen = 500
+o.pumheight = 10
 -- o.updatetime = 100
 -- o.redrawtime = 500
 
