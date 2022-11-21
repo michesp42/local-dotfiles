@@ -68,19 +68,6 @@ local formatter_config = {
   },
 }
 
-local my_clangformat = function()
-  return {
-    exe = 'clang-format',
-    args = {
-      '-style="{BasedOnStyle: chromium, IndentWidth: 4, AccessModifierOffset: -4}"',
-      '--assume-filename',
-      vim.api.nvim_buf_get_name(0),
-    },
-    stdin = true,
-    cwd = vim.fn.expand '%:p:h',
-  }
-end
-
 local c_like_ft = {
   'arduino',
   'c',
@@ -88,7 +75,9 @@ local c_like_ft = {
 }
 
 for _, ft in ipairs(c_like_ft) do
-  formatter_config[ft] = { my_clangformat }
+  formatter_config[ft] = {
+    require('formatter.filetypes.cpp').clangformat,
+  }
 end
 
 local prettier_supported_ft = {
