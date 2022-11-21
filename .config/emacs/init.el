@@ -426,11 +426,6 @@
 ;; configure initial-buffer-choice to show dashboard in frames created with emacsclient -c
 (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
-(use-package highlight-indent-guides
-  :config
-  (setq highlight-indent-guides-method 'character)
-  :hook (prog-mode . highlight-indent-guides-mode))
-
 (use-package yasnippet
   :custom
   (yas-verbosity 2)
