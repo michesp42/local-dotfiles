@@ -1,5 +1,9 @@
 -- init.lua
 
+if vim.g.vscode then
+  return
+end
+
 require 'early-init'
 require 'plugins'
 require 'settings'
