@@ -1024,7 +1024,7 @@ Colorizing strings that represent colors.
 
 #+begin_src emacs-lisp
 
-  (setq c-basic-offset 4)
+  (setq c-basic-offset 2)
   (add-hook 'c-mode-hook 'eglot-ensure)
   (add-hook 'c++-mode-hook 'eglot-ensure)
 

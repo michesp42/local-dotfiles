@@ -754,7 +754,7 @@
 (use-package tree-sitter-langs)
 (use-package tree-sitter-indent)
 
-(setq c-basic-offset 4)
+(setq c-basic-offset 2)
 (add-hook 'c-mode-hook 'eglot-ensure)
 (add-hook 'c++-mode-hook 'eglot-ensure)
 
