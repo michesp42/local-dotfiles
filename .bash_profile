@@ -84,7 +84,6 @@ export LESS_TERMCAP_us=$'\e[1;4;35m' # key terms?
 [ -d "$HOME"/.local/scripts ] && PATH="$PATH:$HOME/.local/scripts"
 [ -d "$GOPATH"/bin ] && PATH="$PATH:$GOPATH/bin"
 [ -d "$HOME"/.dotnet/tools/ ] && PATH="$PATH:$HOME/.dotnet/tools"
-[ -d "$XDG_DATA_HOME"/coursier/bin ] && PATH="$PATH":"$XDG_DATA_HOME"/coursier/bin
 
 # shellcheck source=/home/mice/.bashrc
 [ -f ~/.bashrc ] && . ~/.bashrc
