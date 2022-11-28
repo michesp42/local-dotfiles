@@ -243,7 +243,7 @@
         doom-themes-enable-italic t)
   :init
   (doom-themes-visual-bell-config)
-  (load-theme 'doom-nord t))
+  (load-theme 'doom-one t))
 
 (use-package doom-modeline
   :hook (after-init . doom-modeline-mode)

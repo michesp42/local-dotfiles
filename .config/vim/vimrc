@@ -95,10 +95,10 @@ endif
 call plug#begin()
 
 " One Dark theme
-Plug 'arcticicestudio/nord-vim'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 " -----------------------------------------------------------------------------*
 
-silent! colorscheme nord
+silent! colorscheme onedark
 highlight Comment cterm=italic gui=italic
