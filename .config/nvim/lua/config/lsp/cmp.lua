@@ -10,16 +10,38 @@ if not luasnip_ok then
   return
 end
 
-local lspkind_ok, lspkind = pcall(require, 'lspkind')
-
-if not lspkind_ok then
-  return
-end
-
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match '%s' == nil
 end
+
+local kind_icons = {
+  Text = '',
+  Method = '',
+  Function = '',
+  Constructor = '',
+  Field = '',
+  Variable = '',
+  Class = 'ﴯ',
+  Interface = '',
+  Module = '',
+  Property = 'ﰠ',
+  Unit = '',
+  Value = '',
+  Enum = '',
+  Keyword = '',
+  Snippet = '',
+  Color = '',
+  File = '',
+  Reference = '',
+  Folder = '',
+  EnumMember = '',
+  Constant = '',
+  Struct = '',
+  Event = '',
+  Operator = '',
+  TypeParameter = '',
+}
 
 cmp.setup {
   snippet = {
@@ -67,26 +89,18 @@ cmp.setup {
     { name = 'buffer' },
   }),
 
-  window = {
-    documentation = cmp.config.window.bordered(),
-    completion = {
-      winhighlight = 'Normal:Pmenu,FloatBorder:Pmenu,Search:None',
-      col_offset = -3,
-      side_padding = 0,
-    },
-  },
-
   formatting = {
-    format = lspkind.cmp_format(),
-    --   fields = { 'kind', 'abbr', 'menu' },
-    --   format = function(entry, vim_item)
-    --     local kind = lspkind.cmp_format { mode = 'symbol_text', maxwidth = 50 }(entry, vim_item)
-    --     local strings = vim.split(kind.kind, '%s', { trimempty = true })
-    --     kind.kind = ' ' .. strings[1] .. ' '
-    --     kind.menu = '    (' .. strings[2] .. ')'
-    --
-    --     return kind
-    --   end,
+    format = function(entry, vim_item)
+      vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
+      vim_item.menu = ({
+        buffer = '[Buffer]',
+        nvim_lsp = '[LSP]',
+        luasnip = '[LuaSnip]',
+        nvim_lua = '[Lua]',
+        latex_symbols = '[LaTeX]',
+      })[entry.source.name]
+      return vim_item
+    end,
   },
 }
 

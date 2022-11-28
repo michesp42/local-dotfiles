@@ -57,9 +57,6 @@ packer.startup(function(use)
   use 'saadparwaiz1/cmp_luasnip' -- snippets (luasnip)
   use 'lukas-reineke/cmp-rg' -- ripgrep
 
-  -- icons for completion candidates
-  use 'onsails/lspkind.nvim'
-
   -- treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   -- use { 'nvim-treesitter/nvim-treesitter-textobjects', requires = 'nvim-treesitter' }
