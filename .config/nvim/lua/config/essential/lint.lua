@@ -24,6 +24,7 @@ lint.linters_by_ft = {
   python = { 'flake8', 'mypy', 'pycodestyle', 'pydocstyle', 'pylint' },
   -- rust = { 'clippy' },
   sh = { 'shellcheck' },
+  tex = { 'lacheck' },
   vim = { 'vint' },
   yaml = { 'yamllint' },
 }
