@@ -26,6 +26,7 @@ lint.linters_by_ft = {
   -- rust = { 'clippy' },
   sh = { 'shellcheck' },
   tex = { 'lacheck' },
+  typescript = { 'eslint' },
   vim = { 'vint' },
   yaml = { 'yamllint' },
 }
