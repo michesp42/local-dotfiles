@@ -98,3 +98,6 @@ map(
   { desc = 'move the cursor for the current buffer, opening folders if needed' }
 )
 map('n', '<leader>nc', '<cmd>NvimTreeCollapse<cr>', { desc = 'collapse nvim-tree recursively' })
+
+-- Zen mode
+map('n', '<leader>vz', '<cmd>ZenMode<cr>', { desc = 'Toggle zen mode' })
