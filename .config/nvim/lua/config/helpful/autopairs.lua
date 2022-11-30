@@ -10,6 +10,7 @@ local brackets = { { '(', ')' }, { '[', ']' }, { '{', '}' } }
 
 npairs.setup {
   disabled_in_macro = true,
+  enable_check_bracket_line = false,
 }
 
 -- BEGIN: Add spaces between parentheses
