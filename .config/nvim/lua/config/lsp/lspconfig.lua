@@ -36,6 +36,7 @@ end
 local servers = {
   'bashls',
   'clangd',
+  'clojure_lsp',
   'csharp_ls',
   'cssls',
   'gopls',
