@@ -16,6 +16,7 @@ end
 lint.linters_by_ft = {
   c = { 'clangtidy', 'cppcheck' },
   cpp = { 'clangtidy', 'cppcheck' },
+  clojure = { 'clj-kondo' },
   fennel = { 'fennel' },
   go = { 'golangcilint', 'revive' },
   java = { 'checkstyle' },
