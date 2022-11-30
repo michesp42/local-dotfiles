@@ -843,5 +843,11 @@
 (setq sh-basic-offset 2)
 (add-hook 'sh-mode-hook #'eglot-ensure)
 
+(use-package typescript-mode
+  :mode "\\.ts\\'"
+  :hook (typescript-mode . eglot-ensure)
+  :config
+  (setq typescript-indent-level 2))
+
 (use-package yaml-mode
   :mode ("\\.yml\\'" . yaml-mode))

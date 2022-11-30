@@ -1213,6 +1213,18 @@ Colorizing strings that represent colors.
 
 #+end_src
 
+** Typescript
+
+#+begin_src emacs-lisp
+
+  (use-package typescript-mode
+    :mode "\\.ts\\'"
+    :hook (typescript-mode . eglot-ensure)
+    :config
+    (setq typescript-indent-level 2))
+
+#+end_src
+
 ** YAML
 
 #+begin_src emacs-lisp
