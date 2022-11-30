@@ -840,12 +840,6 @@
   :config
   (setq rust-format-on-save t))
 
-(use-package scala-mode
-  :interpreter
-  ("scala" . scala-mode)
-  :config
-  (setq prettify-symbols-alist scala-prettify-symbols-alist))
-
 (setq sh-basic-offset 2)
 (add-hook 'sh-mode-hook #'eglot-ensure)
 
