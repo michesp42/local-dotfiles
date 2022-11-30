@@ -106,9 +106,6 @@ packer.startup(function(use)
   -- file explorer
   use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons' } }
 
-  -- highlight todo comments
-  use { 'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim' }
-
   -- distraction-free writing
   use 'folke/zen-mode.nvim'
   use 'folke/twilight.nvim'

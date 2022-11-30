@@ -33,7 +33,6 @@ require 'config.helpful.nvim-highlight-colors'
 require 'config.helpful.terminal'
 require 'config.helpful.diffview'
 require 'config.helpful.writing'
-require 'config.helpful.todo-comments'
 require 'config.helpful.which-key'
 
 -- looks nice
