@@ -1,4 +1,5 @@
 local ok, formatter = pcall(require, 'formatter')
+local haskell = require 'formatter.filetypes.haskell'
 
 if not ok then
   return
@@ -17,6 +18,15 @@ local formatter_config = {
 
   go = {
     require('formatter.filetypes.go').gofmt(),
+  },
+
+  haskell = {
+    function()
+      return {
+        exe = 'ormolu',
+        stdin = true,
+      }
+    end,
   },
 
   java = {
