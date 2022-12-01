@@ -1071,7 +1071,7 @@ Colorizing strings that represent colors.
 
 #+begin_src emacs-lisp
 
-  ;; (use-package haskell-mode)
+  (use-package haskell-mode)
 
 #+end_src
 
