@@ -1061,6 +1061,16 @@ Colorizing strings that represent colors.
 
 #+end_src
 
+*** Cider
+
+#+begin_src emacs-lisp
+
+  (use-package cider
+    :hook
+    (clojure-mode . cider-mode))
+
+#+end_src
+
 ** Common Lisp
 
 #+begin_src emacs-lisp

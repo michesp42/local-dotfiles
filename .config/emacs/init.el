@@ -771,6 +771,10 @@
   :hook
   (clojure-mode . subword-mode))
 
+(use-package cider
+  :hook
+  (clojure-mode . cider-mode))
+
 ;; (use-package sly)
 
 (use-package go-mode
