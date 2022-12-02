@@ -772,6 +772,8 @@
   (clojure-mode . subword-mode))
 
 (use-package cider
+  :config
+  (setq cider-repl-display-help-banner nil)
   :hook
   (clojure-mode . cider-mode))
 
