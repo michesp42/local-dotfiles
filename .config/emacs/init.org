@@ -1114,9 +1114,9 @@ Colorizing strings that represent colors.
 
 #+begin_src emacs-lisp
 
-  ;; (use-package julia-mode
-  ;;   :hook
-  ;;   (julia-mode-hook . 'julia-repl-mode))
+  (use-package julia-mode
+    :hook
+    (julia-mode-hook . 'julia-repl-mode))
 
 #+end_src
 
@@ -1124,10 +1124,10 @@ Colorizing strings that represent colors.
 
 #+begin_src emacs-lisp
 
-  ;; (use-package julia-repl
-  ;;   :config
-  ;;   (set-language-environment "UTF-8")
-  ;;   (julia-repl-set-terminal-backend 'vterm))
+  (use-package julia-repl
+    :config
+    (set-language-environment "UTF-8")
+    (julia-repl-set-terminal-backend 'vterm))
 
 #+end_src
 

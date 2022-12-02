@@ -788,14 +788,14 @@
                                   indent-tabs-mode nil)))
 (add-hook 'java-mode-hook 'eglot-ensure)
 
-;; (use-package julia-mode
-;;   :hook
-;;   (julia-mode-hook . 'julia-repl-mode))
+(use-package julia-mode
+  :hook
+  (julia-mode-hook . 'julia-repl-mode))
 
-;; (use-package julia-repl
-;;   :config
-;;   (set-language-environment "UTF-8")
-;;   (julia-repl-set-terminal-backend 'vterm))
+(use-package julia-repl
+  :config
+  (set-language-environment "UTF-8")
+  (julia-repl-set-terminal-backend 'vterm))
 
 ;; (use-package auctex
 ;;   :defer t)
