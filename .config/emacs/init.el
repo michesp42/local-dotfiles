@@ -754,6 +754,11 @@
 (use-package tree-sitter-langs)
 (use-package tree-sitter-indent)
 
+(use-package magit
+  :commands magit-status
+  :custom
+  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
+
 (setq c-basic-offset 2)
 (add-hook 'c-mode-hook 'eglot-ensure)
 (add-hook 'c++-mode-hook 'eglot-ensure)
