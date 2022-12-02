@@ -1205,11 +1205,11 @@ Colorizing strings that represent colors.
 
 #+begin_src emacs-lisp
 
-  ;; (use-package python-mode
-  ;;   :config
-  ;;   (setq python-indent-offset 4)
-  ;;   :hook
-  ;;   (python-mode . eglot-ensure))
+  (use-package python-mode
+    :config
+    (setq python-indent-offset 4)
+    :hook
+    (python-mode . eglot-ensure))
 
 #+end_src
 

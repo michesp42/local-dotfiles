@@ -837,11 +837,11 @@
 ;;   ;; turn off needing to confirm before evaluation
 ;;   (setq org-confirm-babel-evaluate nil))
 
-;; (use-package python-mode
-;;   :config
-;;   (setq python-indent-offset 4)
-;;   :hook
-;;   (python-mode . eglot-ensure))
+(use-package python-mode
+  :config
+  (setq python-indent-offset 4)
+  :hook
+  (python-mode . eglot-ensure))
 
 (use-package rust-mode
   :hook
