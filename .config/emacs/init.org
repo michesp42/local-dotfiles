@@ -1135,8 +1135,8 @@ Colorizing strings that represent colors.
 
 #+begin_src emacs-lisp
 
-  ;; (use-package auctex
-  ;;   :defer t)
+  (use-package auctex
+    :defer t)
 
 #+end_src
 

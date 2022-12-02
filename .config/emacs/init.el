@@ -797,8 +797,8 @@
   (set-language-environment "UTF-8")
   (julia-repl-set-terminal-backend 'vterm))
 
-;; (use-package auctex
-;;   :defer t)
+(use-package auctex
+  :defer t)
 
 (use-package lua-mode)
 
