@@ -779,6 +779,8 @@
 
 ;; (use-package sly)
 
+(setq css-indent-offset 2)
+
 (use-package go-mode
   :hook (go-mode . eglot-ensure))
 

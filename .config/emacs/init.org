@@ -1081,6 +1081,14 @@ Colorizing strings that represent colors.
 
 #+end_src
 
+** CSS
+
+#+begin_src emacs-lisp
+
+  (setq css-indent-offset 2)
+
+#+end_src
+
 ** Go
 
 #+begin_src emacs-lisp
