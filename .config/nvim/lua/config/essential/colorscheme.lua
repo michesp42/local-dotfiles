@@ -1,17 +1,17 @@
-local ok, onedark = pcall(require, 'onedark')
+local ok, onedark = pcall(require, "onedark")
 
 if not ok then
   return
 end
 
-onedark.setup {
+onedark.setup({
   code_style = {
-    keywords = 'italic',
+    keywords = "italic",
   },
 
   highlights = {
-    MatchParen = { fg = '#ff6c6b', bg = '#22252A' },
+    MatchParen = { fg = "#ff6c6b", bg = "#22252A" },
   },
-}
+})
 
 onedark.load()

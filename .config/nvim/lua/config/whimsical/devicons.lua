@@ -1,4 +1,4 @@
-local ok, devicons = pcall(require, 'nvim-web-devicons')
+local ok, devicons = pcall(require, "nvim-web-devicons")
 
 if not ok then
   return

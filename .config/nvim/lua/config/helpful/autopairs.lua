@@ -1,25 +1,25 @@
-local ok, npairs = pcall(require, 'nvim-autopairs')
+local ok, npairs = pcall(require, "nvim-autopairs")
 
 if not ok then
   return
 end
 
-local Rule = require 'nvim-autopairs.rule'
-local cond = require 'nvim-autopairs.conds'
-local brackets = { { '(', ')' }, { '[', ']' }, { '{', '}' } }
+local Rule = require "nvim-autopairs.rule"
+local cond = require "nvim-autopairs.conds"
+local brackets = { { "(", ")" }, { "[", "]" }, { "{", "}" } }
 
-npairs.setup {
+npairs.setup({
   disabled_in_macro = true,
   enable_check_bracket_line = false,
-}
+})
 
 -- BEGIN: Add spaces between parentheses
 
 -- Before    Insert    After
 -- (|)       space     ( | )
 
-npairs.add_rules {
-  Rule(' ', ' ')
+npairs.add_rules({
+  Rule(" ", " ")
     :with_pair(function(opts)
       local pair = opts.line:sub(opts.col - 1, opts.col)
       return vim.tbl_contains({
@@ -34,15 +34,15 @@ npairs.add_rules {
       local col = vim.api.nvim_win_get_cursor(0)[2]
       local context = opts.line:sub(col - 1, col + 2)
       return vim.tbl_contains({
-        brackets[1][1] .. '  ' .. brackets[1][2],
-        brackets[2][1] .. '  ' .. brackets[2][2],
-        brackets[3][1] .. '  ' .. brackets[3][2],
+        brackets[1][1] .. "  " .. brackets[1][2],
+        brackets[2][1] .. "  " .. brackets[2][2],
+        brackets[3][1] .. "  " .. brackets[3][2],
       }, context)
     end),
-}
+})
 
 for _, bracket in pairs(brackets) do
-  Rule('', ' ' .. bracket[2])
+  Rule("", " " .. bracket[2])
     :with_pair(cond.none())
     :with_move(function(opts)
       return opts.char == bracket[2]
@@ -54,9 +54,9 @@ end
 -- END: Add spaces between parentheses
 
 -- BEGIN: Move past commas and semicolons
-for _, punct in pairs { ',', ';' } do
-  npairs.add_rules {
-    Rule('', punct)
+for _, punct in pairs({ ",", ";" }) do
+  npairs.add_rules({
+    Rule("", punct)
       :with_move(function(opts)
         return opts.char == punct
       end)
@@ -70,7 +70,7 @@ for _, punct in pairs { ',', ';' } do
         return false
       end)
       :use_key(punct),
-  }
+  })
 end
 -- END: Move past commas and semicolons
 
@@ -79,11 +79,11 @@ end
 -- Before    Insert    After
 -- (item)=   >         (item)=> {  }
 
-npairs.add_rules {
-  Rule('%(.*%)%s*%=>$', ' {  }', { 'typescript', 'typescriptreact', 'javascript' })
+npairs.add_rules({
+  Rule("%(.*%)%s*%=>$", " {  }", { "typescript", "typescriptreact", "javascript" })
     :use_regex(true)
     :set_end_pair_length(2),
-}
+})
 -- END: arrow key on javascript
 
 -- BEGIN: auto addspace on =

@@ -28,12 +28,12 @@ o.showmode = false
 o.list = true
 o.hlsearch = false
 
-o.colorcolumn = '0'
+o.colorcolumn = "0"
 -- o.completeopt = 'menu,menuone,noselect,noinsert'
-o.diffopt = 'internal,filler,closeoff,algorithm:patience,iwhiteall'
-o.mouse = ''
-o.showbreak = '↪ '
-o.background = 'dark'
+o.diffopt = "internal,filler,closeoff,algorithm:patience,iwhiteall"
+o.mouse = ""
+o.showbreak = "↪ "
+o.background = "dark"
 
 bo.shiftwidth = 4
 bo.swapfile = false
@@ -42,16 +42,15 @@ wo.number = true
 wo.relativenumber = true
 wo.linebreak = true
 
-wo.signcolumn = 'yes'
+wo.signcolumn = "yes"
 
 -- TODO: set this in Lua syntax
 -- set foldmethod=expr
 -- set foldexpr=nvim_treesitter#foldexpr()
 -- set nofoldenable                     " Disable folding at startup.
 
-g.wildignore = { '*.git/', '*.tags', '*.o', '*.class', '*.ccls-cache' }
-g.mapleader = ' '
-
+g.wildignore = { "*.git/", "*.tags", "*.o", "*.class", "*.ccls-cache" }
+g.mapleader = " "
 
 -- netrw config
 -- g.netrw_banner = 0
@@ -61,10 +60,10 @@ g.mapleader = ' '
 
 -- the following requires set list (?)
 -- opt.listchars:append 'eol:↲'
-opt.listchars:append 'tab:» '
-opt.listchars:append 'trail:·'
-opt.listchars:append 'precedes:←'
-opt.listchars:append 'extends:→'
-opt.listchars:append 'nbsp:·'
+opt.listchars:append "tab:» "
+opt.listchars:append "trail:·"
+opt.listchars:append "precedes:←"
+opt.listchars:append "extends:→"
+opt.listchars:append "nbsp:·"
 
 opt.shortmess:append({ I = true }) -- inhibit startup message
