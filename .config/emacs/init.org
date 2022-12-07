@@ -1051,35 +1051,6 @@ Colorizing strings that represent colors.
 
 #+end_src
 
-** Clojure
-
-#+begin_src emacs-lisp
-
-  (use-package clojure-mode
-    :hook
-    (clojure-mode . subword-mode))
-
-#+end_src
-
-*** Cider
-
-#+begin_src emacs-lisp
-
-  (use-package cider
-    :config
-    (setq cider-repl-display-help-banner nil)
-    :hook
-    (clojure-mode . cider-mode))
-
-#+end_src
-
-** Common Lisp
-
-#+begin_src emacs-lisp
-
-  ;; (use-package sly)
-
-#+end_src
 
 ** CSS
 
@@ -1147,6 +1118,39 @@ Colorizing strings that represent colors.
 
   (use-package auctex
     :defer t)
+
+#+end_src
+
+** Lisp
+
+
+*** Clojure
+
+#+begin_src emacs-lisp
+
+  (use-package clojure-mode
+    :hook
+    (clojure-mode . subword-mode))
+
+#+end_src
+
+**** Cider
+
+#+begin_src emacs-lisp
+
+  (use-package cider
+    :config
+    (setq cider-repl-display-help-banner nil)
+    :hook
+    (clojure-mode . cider-mode))
+
+#+end_src
+
+*** Common Lisp
+
+#+begin_src emacs-lisp
+
+  ;; (use-package sly)
 
 #+end_src
 

@@ -767,18 +767,6 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-tree-sitter-mode)))
 
-(use-package clojure-mode
-  :hook
-  (clojure-mode . subword-mode))
-
-(use-package cider
-  :config
-  (setq cider-repl-display-help-banner nil)
-  :hook
-  (clojure-mode . cider-mode))
-
-;; (use-package sly)
-
 (setq css-indent-offset 2)
 
 (use-package go-mode
@@ -803,6 +791,18 @@
 
 (use-package auctex
   :defer t)
+
+(use-package clojure-mode
+  :hook
+  (clojure-mode . subword-mode))
+
+(use-package cider
+  :config
+  (setq cider-repl-display-help-banner nil)
+  :hook
+  (clojure-mode . cider-mode))
+
+;; (use-package sly)
 
 (use-package lua-mode)
 
