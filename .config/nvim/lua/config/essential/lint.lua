@@ -19,6 +19,7 @@ lint.linters_by_ft = {
   clojure = { "clj-kondo" },
   fennel = { "fennel" },
   go = { "golangcilint", "revive" },
+  html = { "tidy" },
   java = { "checkstyle" },
   javascript = { "eslint" },
   lua = { "luacheck" },
