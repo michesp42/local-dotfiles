@@ -65,6 +65,10 @@ local formatter_config = {
     end,
   },
 
+  sql = {
+    require("formatter.filetypes.sql").pgformat(),
+  },
+
   tex = {
     require("formatter.filetypes.latex").latexindent(),
   },
