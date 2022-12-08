@@ -743,6 +743,8 @@
 
 ;; (use-package sly)
 
+(use-package racket-mode)
+
 (use-package lua-mode)
 
 (use-package markdown-mode

@@ -1087,6 +1087,14 @@ Colorizing strings that represent colors.
 
 #+end_src
 
+*** Racket
+
+#+begin_src emacs-lisp
+
+  (use-package racket-mode)
+
+#+end_src
+
 ** Lua
 
 #+begin_src emacs-lisp
