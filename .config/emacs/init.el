@@ -432,6 +432,8 @@
   (yas-global-mode 1)
   (setq yas-snippet-dirs '("~/.local/share/emacs/snippets")))
 
+(use-package yasnippet-snippets)
+
 (use-package vertico
   :custom
   (vertico-cycle t)

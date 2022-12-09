@@ -618,6 +618,16 @@ Colorizing strings that represent colors.
     (yas-global-mode 1)
     (setq yas-snippet-dirs '("~/.local/share/emacs/snippets")))
 
+
+
+#+end_src
+
+*** Yasnippet-snippets
+
+#+begin_src emacs-lisp
+
+  (use-package yasnippet-snippets)
+
 #+end_src
 
 * Completion framework
