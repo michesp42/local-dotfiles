@@ -430,7 +430,6 @@
   (yas-verbosity 2)
   :config
   (yas-global-mode 1)
-  (yas-reload-all)
   (setq yas-snippet-dirs '("~/.local/share/emacs/snippets")))
 
 (use-package vertico
