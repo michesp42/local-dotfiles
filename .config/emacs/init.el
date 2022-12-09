@@ -225,7 +225,6 @@
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 ;; TODO
-(add-hook 'prog-mode-hook #'flymake-mode)
 (add-hook 'shell-mode-hook (lambda () (hl-line-mode -1)))
 (add-hook 'vterm-mode-hook (lambda () (hl-line-mode -1)))
 
@@ -503,7 +502,7 @@
          ("<help> a" . consult-apropos)            ;; orig. apropos-command
          ;; M-g bindings (goto-map)
          ("M-g e" . consult-compile-error)
-         ("M-g f" . consult-flymake)               ;; Alternative: consult-flycheck
+         ("M-g f" . consult-flycheck)               ;; Alternative: consult-flycheck
          ("M-g g" . consult-goto-line)             ;; orig. goto-line
          ("M-g M-g" . consult-goto-line)           ;; orig. goto-line
          ("M-g o" . consult-outline)               ;; Alternative: consult-org-heading
@@ -684,6 +683,10 @@
 (use-package apheleia
   :config
   (apheleia-global-mode +1))
+
+(use-package flycheck
+  :init
+  (global-flycheck-mode))
 
 (use-package tree-sitter
   :config

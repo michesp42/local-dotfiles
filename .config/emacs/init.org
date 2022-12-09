@@ -315,7 +315,6 @@ Automatically tangle the configuration file ~init.org~ on save to ~init.el~.
     (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
   ;; TODO
-  (add-hook 'prog-mode-hook #'flymake-mode)
   (add-hook 'shell-mode-hook (lambda () (hl-line-mode -1)))
   (add-hook 'vterm-mode-hook (lambda () (hl-line-mode -1)))
 
@@ -709,7 +708,7 @@ Colorizing strings that represent colors.
            ("<help> a" . consult-apropos)            ;; orig. apropos-command
            ;; M-g bindings (goto-map)
            ("M-g e" . consult-compile-error)
-           ("M-g f" . consult-flymake)               ;; Alternative: consult-flycheck
+           ("M-g f" . consult-flycheck)               ;; Alternative: consult-flycheck
            ("M-g g" . consult-goto-line)             ;; orig. goto-line
            ("M-g M-g" . consult-goto-line)           ;; orig. goto-line
            ("M-g o" . consult-outline)               ;; Alternative: consult-org-heading
@@ -934,6 +933,16 @@ Colorizing strings that represent colors.
   (use-package apheleia
     :config
     (apheleia-global-mode +1))
+
+#+end_src
+
+** Flycheck
+
+#+begin_src emacs-lisp
+
+  (use-package flycheck
+    :init
+    (global-flycheck-mode))
 
 #+end_src
 
