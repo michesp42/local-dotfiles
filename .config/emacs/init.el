@@ -198,7 +198,7 @@
 (set-default-coding-systems 'utf-8)
 
 (setq history-length 25)
-(setq visible-bell t)
+;; (setq visible-bell t)
 
 (global-auto-revert-mode 1)
 (setq global-auto-revert-non-file-buffers t)
