@@ -1,5 +1,4 @@
 local ok, formatter = pcall(require, "formatter")
-local haskell = require "formatter.filetypes.haskell"
 
 if not ok then
   return
