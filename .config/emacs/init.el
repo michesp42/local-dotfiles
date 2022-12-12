@@ -236,13 +236,18 @@
 (setq custom-file (no-littering-expand-etc-file-name "custom-vars.el"))
 (load custom-file 'noerror 'nomessage)
 
-(use-package doom-themes
+(use-package doom-themes)
+;; :config
+;; (setq doom-themes-enable-bold t
+;;       doom-themes-enable-italic t)
+;; :init
+;; (doom-themes-visual-bell-config)
+;; (load-theme 'doom-one t))
+
+(use-package kaolin-themes
   :config
-  (setq doom-themes-enable-bold t
-        doom-themes-enable-italic t)
-  :init
-  (doom-themes-visual-bell-config)
-  (load-theme 'doom-one t))
+  (load-theme 'kaolin-galaxy t)
+  (kaolin-treemacs-theme))
 
 (use-package doom-modeline
   :hook (after-init . doom-modeline-mode)

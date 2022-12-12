@@ -340,13 +340,24 @@ Automatically tangle the configuration file ~init.org~ on save to ~init.el~.
 
 #+begin_src emacs-lisp
 
-  (use-package doom-themes
+  (use-package doom-themes)
+  ;; :config
+  ;; (setq doom-themes-enable-bold t
+  ;;       doom-themes-enable-italic t)
+  ;; :init
+  ;; (doom-themes-visual-bell-config)
+  ;; (load-theme 'doom-one t))
+
+#+end_src
+
+** Kaolin-theme
+
+#+begin_src emacs-lisp
+
+  (use-package kaolin-themes
     :config
-    (setq doom-themes-enable-bold t
-          doom-themes-enable-italic t)
-    :init
-    (doom-themes-visual-bell-config)
-    (load-theme 'doom-one t))
+    (load-theme 'kaolin-galaxy t)
+    (kaolin-treemacs-theme))
 
 #+end_src
 
