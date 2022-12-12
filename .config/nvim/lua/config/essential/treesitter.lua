@@ -89,6 +89,16 @@ nvim_treesitter_config.setup({
     enable = true,
     extended_mode = true,
     max_file_lines = nil,
+
+    colors = {
+      "#6a9589",
+      "#98bb6c",
+      "#dca561",
+      "#a3d4d5",
+      "#957fb8",
+      "#e46876",
+      "#7e9cd8",
+    },
   },
 
   context_commentstring = {
