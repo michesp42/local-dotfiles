@@ -66,10 +66,10 @@ export TERMINAL=alacritty
 export BAT_CONFIG_PATH="$XDG_CONFIG_HOME"/bat/bat.conf
 export QT_STYLE_OVERRIDE=kvantum
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-  --color=fg:#abb2bf,bg:#282c34,hl:#61afef
-  --color=fg+:#abb2bf,bg+:#3e4451,hl+:#61afef
-  --color=info:#e5c07b,prompt:#a3be8c,pointer:#e06c75
-  --color=marker:#e06c75,spinner:#da8548,header:#4c566a'
+  --color=fg:#dcd7ba,bg:#1f1f28,hl:#7e9cd8
+  --color=fg+:#dcd7ba,bg+:#16161d,hl+:#7e9cd8
+  --color=info:#c0a36e,prompt:#98bb6c,pointer:#c34043
+  --color=marker:#c34043,spinner:#ffa066,header:#363646'
 
 # set pager colors
 export LESS_TERMCAP_mb=$'\e[1;32m'

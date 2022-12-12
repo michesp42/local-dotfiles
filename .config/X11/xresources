@@ -1,46 +1,46 @@
 ! special
-*.foreground:   #ABB2BF
-*.background:   #282C34
-*.cursorColor:  #ABB2BF
+*.foreground:   #dcd7ba
+*.background:   #1f1f28
+*.cursorColor:  #dcd7ba
 *fading: 35
-*fadeColor: #3e4452
+*fadeColor: #727169
 
 ! black
-*.color0:       #2C323C
-*.color8:       #3E4452
+*.color0:       #090618
+*.color8:       #727169
 
 ! red
-*.color1:       #E06C75
-*.color9:       #E06C75
+*.color1:       #c34043
+*.color9:       #e82424
 
 ! green
-*.color2:       #98C379
-*.color10:      #98C379
+*.color2:       #76946a
+*.color10:      #98bb6c
 
 ! yellow
-*.color3:       #E5C07B
-*.color11:      #E5C07B
+*.color3:       #c0a36e
+*.color11:      #e6c384
 
 ! blue
-*.color4:       #61AFEF
-*.color12:      #61AFEF
+*.color4:       #7e9cd8
+*.color12:      #7fb4ca
 
 ! magenta
-*.color5:       #C678DD
-*.color13:      #C678DD
+*.color5:       #957fb8
+*.color13:      #938aa9
 
 ! cyan
-*.color6:       #56B6C2
-*.color14:      #56B6C2
+*.color6:       #6a9589
+*.color14:      #7aa89f
 
 ! white
-*.color7:       #5C6370
-*.color15:      #ABB2BF
+*.color7:       #c8c093
+*.color15:      #dcd7ba
 
 ! Neo Simple X Image Viewer (nsxiv) configuration
-Nsxiv.window.background:  #282c34
-Nsxiv.window.foregrouned:  #abb2bf
-Nsxiv.bar.background:  #56b6c2
-Nsxiv.bar.foreground:  #3e4452
-Nsxiv.mark.foreground:  #E5C07B
+Nsxiv.window.background:  #1f1f28
+Nsxiv.window.foregrouned:  #dcd7ba
+Nsxiv.bar.background:  #7aa89f
+Nsxiv.bar.foreground:  #090618
+Nsxiv.mark.foreground:  #e6c384
 Nsxiv.bar.font:  Ubuntu:style=bold:size=12

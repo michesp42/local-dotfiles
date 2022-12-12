@@ -10,6 +10,6 @@ set sandbox none
 set statusbar-h-padding 0
 set statusbar-v-padding 0
 
-include themes/onedark
+include themes/kanagawa
 
 map <C-i> recolor

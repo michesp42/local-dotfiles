@@ -72,7 +72,7 @@ packer.startup(function(use)
   use({ "RRethy/nvim-treesitter-endwise", requires = "nvim-treesitter/nvim-treesitter" })
 
   -- colorscheme
-  use "navarasu/onedark.nvim"
+  use "rebelot/kanagawa.nvim"
 
   -- visualizing undo history
   use "mbbill/undotree"

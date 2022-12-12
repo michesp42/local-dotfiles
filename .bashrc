@@ -134,24 +134,24 @@ ${branch}${OFF}${dirty}"
   PROMPT_COMMAND=__prompt_command
 else
   # INFO: colors format for linux console generated using
-  # `https://terminal.sexy` with the onehalf dark palette.
+  # `https://terminal.sexy` with the kanagawa color palette.
   /bin/echo -e "
-  \e]P0282c34
-  \e]P1e06c75
-  \e]P298c379
-  \e]P3e5c07b
-  \e]P461afef
-  \e]P5c678dd
-  \e]P656b6c2
-  \e]P7dcdfe4
-  \e]P8282c34
-  \e]P9e06c75
-  \e]PA98c379
-  \e]PBe5c07b
-  \e]PC61afef
-  \e]PDc678dd
-  \e]PE56b6c2
-  \e]PFdcdfe4
+  \e]P0090618
+  \e]P1c34043
+  \e]P276946a
+  \e]P3c0a36e
+  \e]P47e9cd8
+  \e]P5957fb8
+  \e]P66a9589
+  \e]P7c8c093
+  \e]P8727169
+  \e]P9e82424
+  \e]PA98bb6c
+  \e]PBe6c384
+  \e]PC7fb4ca
+  \e]PD938aa9
+  \e]PE7aa89f
+  \e]PFdcd7ba
   "
   clear
 

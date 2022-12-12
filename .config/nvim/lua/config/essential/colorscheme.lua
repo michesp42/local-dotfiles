@@ -1,17 +1,21 @@
-local ok, onedark = pcall(require, "onedark")
+local ok, kanagawa = pcall(require, "kanagawa")
 
 if not ok then
   return
 end
 
-onedark.setup({
-  code_style = {
-    keywords = "italic",
-  },
-
-  highlights = {
-    MatchParen = { fg = "#ff6c6b", bg = "#22252A" },
-  },
+vim.opt.fillchars:append({
+    horiz = '━',
+    horizup = '┻',
+    horizdown = '┳',
+    vert = '┃',
+    vertleft = '┨',
+    vertright = '┣',
+    verthoriz = '╋',
 })
 
-onedark.load()
+kanagawa.setup({
+  globalStatus = true,
+})
+
+vim.cmd "colorscheme kanagawa"
