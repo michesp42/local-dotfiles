@@ -111,6 +111,15 @@
   (setq org-log-info-drawer t)
   (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
   (setq header-line-format " ")		;; create blank space at the top of org file
+  (setq org-src-fontify-natively t)
+  (setq org-fontify-quote-and-verse-blocks t)
+  (setq org-src-tab-acts-natively t)
+  (setq org-edit-src-content-indentation 2)
+  (setq org-hide-block-startup nil)
+  (setq org-src-preserve-indentation nil)
+  (setq org-startup-folded 'content)
+  (setq org-cycle-separator-lines 2)
+  (setq org-capture-bookmark nil)
 
   ;; (setq org-agenda-block-separator ""
   ;;      org-fontify-whole-heading-line t
