@@ -233,6 +233,7 @@
 
 (setq custom-file (no-littering-expand-etc-file-name "custom-vars.el"))
 (load custom-file 'noerror 'nomessage)
+(add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes/"))
 
 (use-package doom-themes)
 ;; :config
@@ -242,10 +243,9 @@
 ;; (doom-themes-visual-bell-config)
 ;; (load-theme 'doom-one t))
 
-(use-package kaolin-themes
+(use-package autothemer
   :config
-  (load-theme 'kaolin-galaxy t)
-  (kaolin-treemacs-theme))
+  (load-theme 'kanagawa t))
 
 (use-package doom-modeline
   :hook (after-init . doom-modeline-mode)

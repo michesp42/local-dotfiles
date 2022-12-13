@@ -329,6 +329,7 @@ Automatically tangle the configuration file ~init.org~ on save to ~init.el~.
 
   (setq custom-file (no-littering-expand-etc-file-name "custom-vars.el"))
   (load custom-file 'noerror 'nomessage)
+  (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes/"))
 
 #+end_src
 
@@ -348,16 +349,19 @@ Automatically tangle the configuration file ~init.org~ on save to ~init.el~.
 
 #+end_src
 
-** Kaolin-theme
+** Autothemer
+
+I copied the Kanagawa theme for Emacs from [[https://github.com/konrad1977/emacs/blob/main/themes/kanagawa-theme.el][konrad1977's port]] of [[https://github.com/rebelot/kanagawa.nvim][rebelot's]] Kanagawa theme for Neovim. The theme is not on [M]ELPA yet so it has to be loaded manually.
 
 #+begin_src emacs-lisp
 
-  (use-package kaolin-themes
+  (use-package autothemer
     :config
-    (load-theme 'kaolin-galaxy t)
-    (kaolin-treemacs-theme))
+    (load-theme 'kanagawa t))
 
 #+end_src
+
+Dependency for Kanagawa theme
 
 ** Doom modeline
 
