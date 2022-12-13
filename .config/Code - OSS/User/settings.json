@@ -1,0 +1,67 @@
+{
+    "editor.fontFamily": "'JetBrains Mono', 'monospace', monospace",
+    "code-runner.runInTerminal": true,
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "zenMode.centerLayout": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "[c]": {
+        "editor.tabSize": 2
+    },
+    "[cpp]": {
+        "editor.tabSize": 2
+    },
+    "[css]": {
+        "editor.tabSize": 2
+    },
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[java]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "ilkka.google-java-format"
+    },
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[rust]": {
+        "editor.tabSize": 4
+    },
+    "[scala]": {
+        "editor.tabSize": 2
+    },
+    "[sh]": {
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontSize": 14.7,
+    "google-java-format.executable-path": "/usr/bin/google-java-format",
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "editor.fontLigatures": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "metals.javaHome": "/usr/lib/jvm/java-17-openjdk",
+    "prettier.semi": false,
+    "haskell.manageHLS": "PATH",
+    "workbench.colorTheme": "Kanagawa"
+}
