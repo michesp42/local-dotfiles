@@ -457,8 +457,6 @@ Dependency for Kanagawa theme
 
 #+end_src
 
-#+RESULTS:
-
 *** Undo-tree
 
 #+begin_src emacs-lisp
@@ -1084,7 +1082,6 @@ Colorizing strings that represent colors.
 #+end_src
 
 ** Lisp
-
 
 *** Clojure
 
