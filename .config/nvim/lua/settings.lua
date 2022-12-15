@@ -28,7 +28,7 @@ o.showmode = false
 o.list = true
 o.hlsearch = false
 
-o.colorcolumn = "0"
+o.colorcolumn = "80"
 -- o.completeopt = 'menu,menuone,noselect,noinsert'
 o.diffopt = "internal,filler,closeoff,algorithm:patience,iwhiteall"
 o.mouse = ""
