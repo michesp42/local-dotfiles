@@ -34,6 +34,7 @@ require "config.helpful.terminal"
 require "config.helpful.diffview"
 require "config.helpful.writing"
 require "config.helpful.which-key"
+require "config.helpful.emmet"
 
 -- looks nice
 require "config.whimsical.devicons"
