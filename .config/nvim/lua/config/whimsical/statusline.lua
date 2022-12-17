@@ -7,5 +7,6 @@ end
 lualine.setup({
   options = {
     theme = "kanagawa",
+    globalstatus = true,
   },
 })
