@@ -60,10 +60,10 @@ g.mapleader = " "
 
 -- the following requires set list (?)
 -- opt.listchars:append 'eol:↲'
-opt.listchars:append "tab:» "
-opt.listchars:append "trail:·"
-opt.listchars:append "precedes:←"
-opt.listchars:append "extends:→"
-opt.listchars:append "nbsp:·"
+opt.listchars:append("tab:» ")
+opt.listchars:append("trail:·")
+opt.listchars:append("precedes:←")
+opt.listchars:append("extends:→")
+opt.listchars:append("nbsp:·")
 
 opt.shortmess:append({ I = true }) -- inhibit startup message
