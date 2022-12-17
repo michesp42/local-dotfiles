@@ -11,7 +11,7 @@ o.sidescrolloff = 8
 o.laststatus = 3 -- global statusline
 o.timeoutlen = 500
 o.pumheight = 10
--- o.updatetime = 100
+o.updatetime = 50
 -- o.redrawtime = 500
 
 o.expandtab = false
@@ -21,7 +21,6 @@ o.wrap = false
 o.incsearch = true
 o.hidden = true
 o.cursorline = true
-o.backup = false
 o.termguicolors = true
 o.ignorecase = true
 o.showmode = false
@@ -34,6 +33,11 @@ o.diffopt = "internal,filler,closeoff,algorithm:patience,iwhiteall"
 o.mouse = ""
 o.showbreak = "↪ "
 o.background = "dark"
+
+-- undoing related
+o.backup = false
+o.undofile = true
+o.undodir = os.getenv("XDG_DATA_HOME") .. "/nvim/undo"
 
 bo.shiftwidth = 4
 bo.swapfile = false
