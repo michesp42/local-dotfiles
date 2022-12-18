@@ -313,4 +313,15 @@ feline.setup({
   components = components,
   theme = theme,
   vi_mode_colors = mode_theme,
+  force_inactive = {
+    filetypes = {
+      "^startify$",
+      "^fugitive$",
+      "^fugitiveblame$",
+      "^qf$",
+    },
+    buftypes = {
+      "^terminal$",
+    },
+  },
 })
