@@ -61,6 +61,23 @@ component.vim_mode = {
   right_sep = "block",
 }
 
+component.file_info = {
+  provider = {
+    name = "file_info",
+    opts = {
+      colored_icon = true,
+      type = "relative-short",
+    },
+  },
+  hl = {
+    fg = "fg",
+    bg = "gray",
+  },
+  left_sep = "block",
+  right_sep = "block",
+  icon = "",
+}
+
 component.git_branch = {
   provider = "git_branch",
   hl = {
@@ -282,6 +299,7 @@ component.rhs_filler = {
 
 local left = {
   component.vim_mode,
+  component.file_info,
   component.git_branch,
   component.git_add,
   component.git_delete,
