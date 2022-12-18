@@ -100,7 +100,8 @@ packer.startup(function(use)
 
   -- statusline plugin
   -- use 'rebelot/heirline.nvim'
-  use("nvim-lualine/lualine.nvim")
+  -- use("nvim-lualine/lualine.nvim")
+  use("feline-nvim/feline.nvim")
 
   -- icons
   use("nvim-tree/nvim-web-devicons")
