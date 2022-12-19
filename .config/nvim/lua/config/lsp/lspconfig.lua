@@ -84,6 +84,10 @@ lspconfig.omnisharp.setup({
     "dotnet",
     "/home/mice/.vscode-oss/extensions/ms-dotnettools.csharp-1.25.2-linux-x64/.omnisharp/1.39.2-net6.0/OmniSharp.dll",
   },
+
+  on_attach = on_attach,
+  capabilities = capabilities,
+
   enable_editorconfig_support = true,
   enable_ms_build_load_projects_on_demand = false,
   enable_roslyn_analyzers = true,
