@@ -37,7 +37,6 @@ local servers = {
   "bashls",
   "clangd",
   "clojure_lsp",
-  "csharp_ls",
   "cssls",
   "gopls",
   "html",
@@ -78,6 +77,20 @@ lspconfig.sumneko_lua.setup({
       },
     },
   },
+})
+
+lspconfig.omnisharp.setup({
+  cmd = {
+    "dotnet",
+    "/home/mice/.vscode-oss/extensions/ms-dotnettools.csharp-1.25.2-linux-x64/.omnisharp/1.39.2-net6.0/OmniSharp.dll",
+  },
+  enable_editorconfig_support = true,
+  enable_ms_build_load_projects_on_demand = false,
+  enable_roslyn_analyzers = true,
+  organize_imports_on_format = true,
+  enable_import_completion = true,
+  sdk_include_prereleases = true,
+  analyze_open_documents_only = false,
 })
 
 -- TODO: setup arduino language server with AVR board specific stuff ...
