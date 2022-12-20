@@ -86,6 +86,7 @@ export LESS_TERMCAP_us=$'\e[1;4;35m' # key terms?
 [ -d "$HOME"/.dotnet/tools/ ] && PATH="$PATH:$HOME/.dotnet/tools"
 [ -d "$XDG_DATA_HOME"/cargo/bin/ ] && PATH="$PATH:$XDG_DATA_HOME/cargo/bin"
 [ -d "$XDG_DATA_HOME"/gem/ruby/3.0.0/bin ] && PATH="$PATH:$XDG_DATA_HOME/gem/ruby/3.0.0/bin"
+[ -d "$XDG_DATA_HOME"/npm/bin ] && PATH="$PATH:$XDG_DATA_HOME/npm/bin/"
 
 # shellcheck source=/home/mice/.bashrc
 [ -f ~/.bashrc ] && . ~/.bashrc
