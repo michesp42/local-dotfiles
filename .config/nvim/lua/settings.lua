@@ -70,4 +70,4 @@ opt.listchars:append("precedes:←")
 opt.listchars:append("extends:→")
 opt.listchars:append("nbsp:·")
 
-opt.shortmess:append({ I = true }) -- inhibit startup message
+-- opt.shortmess:append({ I = true }) -- inhibit startup message
