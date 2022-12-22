@@ -17,6 +17,7 @@ export HISTCONTROL=ignoredups:erasedups # no duplicate entries
 export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME"/bash-completion/bash_completion
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export FFMPEG_DATADIR="$XDG_CONFIG_HOME"/ffmpeg
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GOPATH="$XDG_DATA_HOME"/go
