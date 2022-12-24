@@ -43,6 +43,7 @@ local servers = {
   "html",
   "jedi_language_server",
   "jsonls",
+  "ocamllsp",
   -- 'julials',
   "rust_analyzer",
   "texlab",
