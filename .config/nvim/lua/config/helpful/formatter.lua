@@ -46,6 +46,10 @@ local formatter_config = {
     require("formatter.filetypes.lua").stylua,
   },
 
+  ocaml = {
+    require("formatter.filetypes.ocaml").ocamlformat,
+  },
+
   python = {
     require("formatter.filetypes.python").black(),
   },
