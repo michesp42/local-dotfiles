@@ -81,6 +81,9 @@ export LESS_TERMCAP_so=$'\e[01;33m' # text at the bottom
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;35m' # key terms?
 
+# opam configuration
+test -r /home/mice/.opam/opam-init/init.sh && . /home/mice/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
 [ -d "$HOME"/.local/bin ] && PATH="$PATH:$HOME/.local/bin"
 [ -d "$HOME"/.local/scripts ] && PATH="$PATH:$HOME/.local/scripts"
 [ -d "$GOPATH"/bin ] && PATH="$PATH:$GOPATH/bin"
@@ -88,6 +91,7 @@ export LESS_TERMCAP_us=$'\e[1;4;35m' # key terms?
 [ -d "$XDG_DATA_HOME"/cargo/bin/ ] && PATH="$PATH:$XDG_DATA_HOME/cargo/bin"
 [ -d "$XDG_DATA_HOME"/gem/ruby/3.0.0/bin ] && PATH="$PATH:$XDG_DATA_HOME/gem/ruby/3.0.0/bin"
 [ -d "$XDG_DATA_HOME"/npm/bin ] && PATH="$PATH:$XDG_DATA_HOME/npm/bin/"
+[ -d "$HOME/.opam/default/bin/" ] && PATH="$PATH:$HOME/.opam/default/bin/"
 
 # shellcheck source=/home/mice/.bashrc
 [ -f ~/.bashrc ] && . ~/.bashrc

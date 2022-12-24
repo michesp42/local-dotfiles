@@ -31,6 +31,9 @@ if [ "$INSIDE_EMACS" = "vterm" ]; then
   }
 fi
 
+# OCaml stuff
+eval "$(opam env)"
+
 # limit number of directories shown in the prompt
 # now `\w` will show something like `~/.../path/to/dir`
 PROMPT_DIRTRIM=3
