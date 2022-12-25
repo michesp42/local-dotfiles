@@ -1021,14 +1021,6 @@ Colorizing strings that represent colors.
 #+end_src
 
 
-** CSS
-
-#+begin_src emacs-lisp
-
-  (setq css-indent-offset 2)
-
-#+end_src
-
 ** Go
 
 #+begin_src emacs-lisp
@@ -1224,7 +1216,28 @@ Colorizing strings that represent colors.
 
 #+end_src
 
-** Typescript
+** Web Development
+*** HTML
+
+*** CSS
+
+
+#+begin_src emacs-lisp
+
+  (setq css-indent-offset 2)
+
+#+end_src
+
+*** Javascript
+
+#+begin_src emacs-lisp
+
+  (setq js-indent-level 2)
+  (add-hook 'js-mode-hook 'eglot-ensure)
+
+#+end_src
+
+*** Typescript
 
 #+begin_src emacs-lisp
 

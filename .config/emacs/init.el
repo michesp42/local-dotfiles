@@ -720,8 +720,6 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-tree-sitter-mode)))
 
-(setq css-indent-offset 2)
-
 (use-package go-mode
   :hook (go-mode . eglot-ensure))
 
@@ -810,6 +808,11 @@
 
 (setq sh-basic-offset 2)
 (add-hook 'sh-mode-hook #'eglot-ensure)
+
+(setq css-indent-offset 2)
+
+(setq js-indent-level 2)
+(add-hook 'js-mode-hook 'eglot-ensure)
 
 (use-package typescript-mode
   :mode "\\.ts\\'"
