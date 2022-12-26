@@ -435,7 +435,6 @@ Dependency for Kanagawa theme
     :hook (dired-mode . all-the-icons-dired-mode))
 
 #+end_src
-** 
 * Improving the UI
 
 ** Utilities
@@ -1020,7 +1019,6 @@ Colorizing strings that represent colors.
 
 #+end_src
 
-
 ** Go
 
 #+begin_src emacs-lisp
@@ -1049,7 +1047,6 @@ Colorizing strings that represent colors.
   (add-hook 'java-mode-hook 'eglot-ensure)
 
   #+end_src
-** 
 ** Julia
 
 *** julia-mode
