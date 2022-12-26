@@ -27,10 +27,17 @@ packer.startup(function(use)
   use("lewis6991/impatient.nvim")
 
   -- telescope: fuzzy finder and much more
-  use({ "nvim-telescope/telescope.nvim", tag = "0.1.x", requires = { "nvim-lua/plenary.nvim" } })
+  use({
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.x",
+    requires = "nvim-lua/plenary.nvim",
+  })
 
   -- telescope extensions
-  -- use {'axkirillov/easypick.nvim', requires = 'nvim-telescope/telescope.nvim'}
+  -- use({
+  --   "axkirillov/easypick.nvim",
+  --   requires = "nvim-telescope/telescope.nvim"
+  -- })
 
   -- lsp
   use("neovim/nvim-lspconfig")
@@ -60,18 +67,45 @@ packer.startup(function(use)
   use("lukas-reineke/cmp-rg") -- ripgrep
 
   -- treesitter
-  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-  -- use { 'nvim-treesitter/nvim-treesitter-textobjects', requires = 'nvim-treesitter' }
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  })
+  -- use({
+  --   "nvim-treesitter/nvim-treesitter-textobjects",
+  --   requires = "nvim-treesitter",
+  -- })
 
   -- treesitter extensions
-  use({ "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" })
-  use({ "JoosepAlviste/nvim-ts-context-commentstring", requires = "nvim-treesitter/nvim-treesitter" })
-  use({ "kylechui/nvim-surround", requires = "nvim-treesitter/nvim-treesitter" })
+  use({
+    "p00f/nvim-ts-rainbow",
+    requires = "nvim-treesitter/nvim-treesitter",
+  })
+  use({
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    requires = "nvim-treesitter/nvim-treesitter",
+  })
+  use({
+    "kylechui/nvim-surround",
+    requires = "nvim-treesitter/nvim-treesitter",
+  })
 
   -- autopairing (brackets, parentheses, html tags, keywords like if ... fi)
-  use({ "windwp/nvim-autopairs", requires = { "nvim-treesitter/nvim-treesitter", opt = true } })
-  use({ "windwp/nvim-ts-autotag", requires = "nvim-treesitter/nvim-treesitter" })
-  use({ "RRethy/nvim-treesitter-endwise", requires = "nvim-treesitter/nvim-treesitter" })
+  use({
+    "windwp/nvim-autopairs",
+    requires = {
+      "nvim-treesitter/nvim-treesitter",
+      opt = true,
+    },
+  })
+  use({
+    "windwp/nvim-ts-autotag",
+    requires = "nvim-treesitter/nvim-treesitter",
+  })
+  use({
+    "RRethy/nvim-treesitter-endwise",
+    requires = "nvim-treesitter/nvim-treesitter",
+  })
 
   -- colorscheme
   use("rebelot/kanagawa.nvim")
@@ -93,7 +127,10 @@ packer.startup(function(use)
 
   -- git plugins
   use("lewis6991/gitsigns.nvim")
-  use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+  use({
+    "sindrets/diffview.nvim",
+    requires = "nvim-lua/plenary.nvim",
+  })
 
   -- color highlighting
   use("brenoprata10/nvim-highlight-colors")
@@ -107,7 +144,13 @@ packer.startup(function(use)
   use("nvim-tree/nvim-web-devicons")
 
   -- file explorer
-  use({ "nvim-tree/nvim-tree.lua", requires = { "nvim-tree/nvim-web-devicons" } })
+  use({
+    "nvim-tree/nvim-tree.lua",
+    requires = {
+      "nvim-tree/nvim-web-devicons",
+      opt = true,
+    },
+  })
 
   -- distraction-free writing
   use("folke/zen-mode.nvim")
