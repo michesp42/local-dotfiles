@@ -1180,6 +1180,14 @@ Colorizing strings that represent colors.
 
 #+end_src
 
+** OCaml
+
+#+begin_src emacs-lisp
+
+  (use-package tuareg)
+
+#+end_src
+
 ** Python
 
 #+begin_src emacs-lisp

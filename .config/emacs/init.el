@@ -794,6 +794,8 @@
 ;;   ;; turn off needing to confirm before evaluation
 ;;   (setq org-confirm-babel-evaluate nil))
 
+(use-package tuareg)
+
 (use-package python-mode
   :config
   (setq python-indent-offset 4)
