@@ -79,11 +79,12 @@ end
 -- Before    Insert    After
 -- (item)=   >         (item)=> {  }
 
-npairs.add_rules({
-  Rule("%(.*%)%s*%=>$", " {  }", { "typescript", "typescriptreact", "javascript" })
-    :use_regex(true)
-    :set_end_pair_length(2),
-})
+-- npairs.add_rules({
+--   Rule("%(.*%)%s*%=>$", " {  }", { "typescript", "typescriptreact", "javascript" })
+--     :use_regex(true)
+--     :set_end_pair_length(2),
+-- })
+
 -- END: arrow key on javascript
 
 -- BEGIN: auto addspace on =
