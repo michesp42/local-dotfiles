@@ -723,7 +723,8 @@
 (use-package go-mode
   :hook (go-mode . eglot-ensure))
 
-(use-package haskell-mode)
+(use-package haskell-mode
+  :hook (haskell-mode . eglot-ensure))
 
 (add-hook 'java-mode-hook (lambda ()
                             (setq c-basic-offset 2
