@@ -131,7 +131,7 @@ end, { desc = "[FTerm] Exit terminal" })
 
 -- autoformatter keymaps
 nnoremap("<leader>ff", "<cmd>Format<cr>", { desc = "autoformat buffer" })
-nnoremap("<leader>fw", "<cmd>FormatWrite<cr>", { desc = "autoformat buffer and save file" })
+nnoremap("<leader>fw", "<cmd>FormatWrite<cr>", { desc = "autoformat and save buffer" })
 
 -- NvimTree keymaps
 nnoremap("<leader>nt", "<cmd>NvimTreeToggle<cr>", { desc = "toggle nvim-tree" })
