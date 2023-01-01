@@ -34,6 +34,8 @@ nvim_treesitter_config.setup({
     "julia",
     "latex",
     "lua",
+    "ocaml",
+    "ocaml_interface",
     "org",
     "make",
     "markdown",
