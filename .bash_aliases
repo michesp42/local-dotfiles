@@ -56,20 +56,25 @@ forecast() {
 }
 export forecast
 
+# an almost better cd command
+bcd() {
+  cd "$(/usr/bin/ls -1d -- .*/ */ | tr -d '/' | /usr/bin/fzf --height=~70% \
+    --border=rounded --reverse)" || return
+}
+export bcd
+
+# add bling to fzf
+alias fzf="fzf --height=~70% --border=rounded --reverse"
+
+# fuzzy find file and open in it in the editor
+# NOTE: This is redundant since I use telescope.nvim but still very cool
+# TODO: I should just turn this into a function so I can pipe the output not
+# just to nvim
+alias ff="fd --type f --hidden --exclude .git | fzf-tmux -p -- --reverse \
+  --border=rounded --margin 20% | xargs -r nvim"
+
 ### aliases to be load if not in linux console
-
 if [ "$TERM" != "linux" ] && [ "$TERM" != "xterm-256color" ]; then
-
-  # an almost better cd command
-  bcd() {
-    cd "$(/usr/bin/ls -1d -- .*/ */ | tr -d '/' | /usr/bin/fzf --height=~70% \
-      --border=rounded --reverse --prompt=' ' --pointer='')" || return
-  }
-  export bcd
-
-  # add bling to fzf
-  alias fzf="(fzf --height=~70% --border=rounded --reverse --prompt=' ' \
---pointer='')"
 
   # fancy alternatives for default programs
   alias ls='exa --icons --group-directories-first' # ls but with icons
