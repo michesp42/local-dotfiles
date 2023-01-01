@@ -693,9 +693,9 @@
 
 (use-package eglot)
 
-(use-package apheleia
-  :config
-  (apheleia-global-mode +1))
+;; (use-package apheleia
+;;   :config
+;;   (apheleia-global-mode +1))
 
 (add-hook 'prog-mode-hook #'flymake-mode)
 
