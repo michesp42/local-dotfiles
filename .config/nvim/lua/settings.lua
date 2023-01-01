@@ -64,7 +64,7 @@ g.mapleader = " "
 
 -- the following requires set list (?)
 opt.listchars:append({
-  -- eol = "↲",
+  -- eol = "¬",
   tab = "» ",
   trail = "·",
   precedes = "←",
