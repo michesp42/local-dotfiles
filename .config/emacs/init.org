@@ -348,13 +348,13 @@ Automatically tangle the configuration file ~init.org~ on save to ~init.el~.
 
 #+begin_src emacs-lisp
 
-  (use-package doom-themes)
-  ;; :config
-  ;; (setq doom-themes-enable-bold t
-  ;;       doom-themes-enable-italic t)
-  ;; :init
-  ;; (doom-themes-visual-bell-config)
-  ;; (load-theme 'doom-one t))
+  (use-package doom-themes
+    :config
+    (setq doom-themes-enable-bold t
+          doom-themes-enable-italic t)
+    :init
+    (doom-themes-visual-bell-config)
+    (load-theme 'doom-nord t))
 
 #+end_src
 
@@ -364,9 +364,9 @@ I copied the Kanagawa theme for Emacs from [[https://github.com/konrad1977/emacs
 
 #+begin_src emacs-lisp
 
-  (use-package autothemer
-    :config
-    (load-theme 'kanagawa t))
+  ;; (use-package autothemer
+  ;;   :config
+  ;;   (load-theme 'kanagawa t))
 
 #+end_src
 

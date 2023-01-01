@@ -244,17 +244,17 @@
 (load custom-file 'noerror 'nomessage)
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes/"))
 
-(use-package doom-themes)
-;; :config
-;; (setq doom-themes-enable-bold t
-;;       doom-themes-enable-italic t)
-;; :init
-;; (doom-themes-visual-bell-config)
-;; (load-theme 'doom-one t))
-
-(use-package autothemer
+(use-package doom-themes
   :config
-  (load-theme 'kanagawa t))
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t)
+  :init
+  (doom-themes-visual-bell-config)
+  (load-theme 'doom-nord t))
+
+;; (use-package autothemer
+;;   :config
+;;   (load-theme 'kanagawa t))
 
 (use-package doom-modeline
   :hook (after-init . doom-modeline-mode)

@@ -108,7 +108,8 @@ packer.startup(function(use)
   })
 
   -- colorscheme
-  use("rebelot/kanagawa.nvim")
+  -- use("rebelot/kanagawa.nvim")
+  use("gbprod/nord.nvim")
 
   -- visualizing undo history
   use("mbbill/undotree")

@@ -9,20 +9,20 @@ if not ok then
 end
 
 local theme = {
-  aqua = "#7fb4ca",
-  bg = "#16161d",
-  blue = "#7e9cd8",
-  cyan = "#6a9589",
-  darkred = "#c34043",
-  fg = "#dcd7ba",
-  gray = "#2a2a37",
-  green = "#76946a",
-  lime = "#a3d4d5",
-  orange = "#ffa066",
+  aqua = "#88c0d5",
+  bg = "#2b303b",
+  blue = "#81a1ce",
+  cyan = "#88c0d0",
+  darkred = "#e46876",
+  fg = "#eceff4",
+  gray = "#3b4252",
+  green = "#a3be8c",
+  lime = "#8fbcbb",
+  orange = "#d08770",
   pink = "#d27e99",
-  purple = "#957fb8",
-  red = "#e46876",
-  yellow = "#e6c384",
+  purple = "#b48ead",
+  red = "#bf6a6a",
+  yellow = "#ebcb8b",
 }
 
 local mode_theme = {

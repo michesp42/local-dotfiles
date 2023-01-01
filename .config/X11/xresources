@@ -1,46 +1,47 @@
-! special
-*.foreground:   #dcd7ba
-*.background:   #1f1f28
-*.cursorColor:  #dcd7ba
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
 *fading: 35
-*fadeColor: #727169
+*fadeColor: nord3
 
-! black
-*.color0:       #090618
-*.color8:       #727169
-
-! red
-*.color1:       #c34043
-*.color9:       #e82424
-
-! green
-*.color2:       #76946a
-*.color10:      #98bb6c
-
-! yellow
-*.color3:       #c0a36e
-*.color11:      #e6c384
-
-! blue
-*.color4:       #7e9cd8
-*.color12:      #7fb4ca
-
-! magenta
-*.color5:       #957fb8
-*.color13:      #938aa9
-
-! cyan
-*.color6:       #6a9589
-*.color14:      #7aa89f
-
-! white
-*.color7:       #c8c093
-*.color15:      #dcd7ba
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
 
 ! Neo Simple X Image Viewer (nsxiv) configuration
-Nsxiv.window.background:  #1f1f28
-Nsxiv.window.foregrouned:  #dcd7ba
-Nsxiv.bar.background:  #7aa89f
-Nsxiv.bar.foreground:  #090618
-Nsxiv.mark.foreground:  #e6c384
+Nsxiv.window.background:  nord0
+Nsxiv.window.foregrouned:  nord4
+Nsxiv.bar.background:  nord8
+Nsxiv.bar.foreground:  nord1
+Nsxiv.mark.foreground:  nord12
 Nsxiv.bar.font:  Ubuntu:style=bold:size=12
