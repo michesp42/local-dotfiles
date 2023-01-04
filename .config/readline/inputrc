@@ -82,4 +82,4 @@ $endif
 #
 
 # shortcut to cd to parent directory
-"\C-h":"cd ..\n"
+# "\C-h":"cd ..\n"
