@@ -91,6 +91,16 @@ nvim_treesitter_config.setup({
     enable = true,
     extended_mode = true,
     max_file_lines = nil,
+
+    hlgroups = {
+      "TSRainbowBlue",
+      "TSRainbowGreen",
+      "TSRainbowRed",
+      "TSRainbowYellow",
+      "TSRainbowCyan",
+      "TSRainbowViolet",
+      "TSRainbowOrange",
+    },
   },
 
   context_commentstring = {
