@@ -8,7 +8,12 @@
 pgrep -x sxhkd >/dev/null || sxhkd &
 
 # launch statusbar
-pgrep -x polybar >/dev/null || "$HOME"/.config/polybar/launch
+pgrep -x polybar >/dev/null || "$HOME"/.config/polybar/launch &
+
+# redshift to adjust display color temperature
+# launch redshift last
+pgrep -x redshift >/dev/null || redshift -o 4500
+
 
 #
 # configuring bspwm via `bspc`

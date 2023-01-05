@@ -37,9 +37,6 @@ pgrep -x mpd >/dev/null || mpd &
 # compositor for transparency
 pgrep -x picom >/dev/null || picom --daemon &
 
-# redshift to adjust display color temperature
-pgrep -x redshift >/dev/null || redshift -t 5000:4500 &
-
 # notification daemon to receive desktop notifications and warnings
 pgrep -x dunst >/dev/null || dunst &
 
