@@ -78,7 +78,7 @@ packer.startup(function(use)
 
   -- treesitter extensions
   use({
-    "p00f/nvim-ts-rainbow",
+    "https://gitlab.com/HiPhish/nvim-ts-rainbow2",
     requires = "nvim-treesitter/nvim-treesitter",
   })
   use({
