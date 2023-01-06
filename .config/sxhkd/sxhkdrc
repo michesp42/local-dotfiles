@@ -189,6 +189,14 @@ super + alt + w
 super + alt + u
     xdg-open /usr/share/doc/java-openjdk/api/index.html
 
+# launch discord
+super + d
+    apulse discord
+
+# launch zoom
+super + z
+    apulse zoom
+
 #
 # scratchpads
 #
