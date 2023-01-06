@@ -12,7 +12,7 @@ pgrep -x polybar >/dev/null || "$HOME"/.config/polybar/launch &
 
 # redshift to adjust display color temperature
 # launch redshift last
-pgrep -x redshift >/dev/null || redshift -o 4500 &
+pgrep -x redshift >/dev/null || redshift -t 5700:3600 & 
 
 
 #
