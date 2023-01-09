@@ -1,4 +1,4 @@
 [flags]
 dot_marker = true
 temperature_type = "celsius"
-color = "default"
+color = "nord"
