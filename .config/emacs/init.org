@@ -5,6 +5,10 @@
 #+DESCRIPTION: Just another attempt at configuring Emacs (old-config)
 #+PROPERTY: header-args:emacs-lisp :tangle ./init.el
 
+* WARNING:
+
+*DEPRECATING THIS EMACS CONFIGURATION*.
+
 * Package manager
 
 Bootstrap [[https://github.com/radian-software/straight.el][straight.el]] and integrate it by default to [[https://github.com/jwiegley/use-package][use-package]].
